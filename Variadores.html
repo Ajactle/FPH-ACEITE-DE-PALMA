@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPH - Soluciones para Aceite de Palma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<nav class="absolute top-0 left-0 w-full z-50 font-['Montserrat',_sans-serif]">
+    <div class="max-w-7xl mx-auto px-6 py-5 md:py-6 flex justify-between items-center">
+        
+        <!-- LADO IZQUIERDO: Logo -->
+        <div class="flex items-center">
+            <!-- Tip: Como el fondo ahora es oscuro, te recomiendo usar una versión en blanco/clara de tu logo. -->
+            <!-- Si tu logo actual es oscuro, puedes agregar temporalmente las clases "brightness-0 invert" para forzarlo a verse blanco -->
+            <img src="fph-logo-blanco.png" alt="Logo FPH" class="h-24 md:h-24 object-contain brightness-0 invert md:brightness-100 md:invert-0">
+        </div>
+
+        <!-- CENTRO: Enlaces de Navegación (Centrados y en Blanco) -->
+         <!-- CENTRO: Enlaces de Navegación (Centrados y en Blanco) -->
+        <div class="hidden md:flex flex-1 justify-center items-center gap-10 text-white text-sm md:text-base font-semibold tracking-wide">
+            <a href="Index.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                INICIO
+            </a>
+            <a href="Nosotros.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                NOSOTROS
+            </a>
+            <a href="Productos.html" class="flex items-center gap-1.5 hover:text-gray-300 transition-colors group drop-shadow-md">
+                PRODUCTOS<i class="fas fa-chevron-down text-[10px] opacity-70 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+            <a href="Servicios.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                SERVICIOS
+            </a>
+            <a href="Contacto.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                CONTACTO
+            </a>
+        </div>
+
+        <!-- LADO DERECHO: Menú Móvil (Solo visible en celulares) -->
+        <div class="md:hidden flex items-center">
+            <button class="text-white text-3xl focus:outline-none drop-shadow-md">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+    </div>
+</nav>
+   <!-- SECCIÓN PRINCIPAL (HERO) CON VIDEO LOCAL Y CORTE EN "V" -->
+<section id="inicio" class="relative font-['Montserrat',_sans-serif] flex flex-col w-full h-[80vh] md:h-[98vh] overflow-hidden" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 95%, 0 100%);">
+    
+    <!-- Agregué un bg-[#0a192f] por si el video tarda 1 segundo en cargar, no se vea blanco -->
+    <div class="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none bg-[#0a192f]">
+        
+        <!-- Etiqueta de Video Nativo -->
+        <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2"
+        >
+            <!-- AQUÍ PONES EL NOMBRE DE TU VIDEO DESCARGADO -->
+            <source src="Productos/Variadores/variadores1.mp4" type="video/mp4">
+        </video>
+
+    </div>
+    
+    <!-- Filtro oscuro reforzado para que las letras blancas resalten perfecto sobre el video -->
+    <div class="absolute inset-0 bg-[#0a192f]/60 z-10"></div>
+
+    <!-- Contenido Centrado (Títulos) -->
+    <div class="relative z-20 w-full h-full max-w-5xl mx-auto px-6 flex flex-col items-center justify-center text-center pt-10">
+        
+        <!-- Título Principal -->
+        <h1 class="text-white text-4xl md:text-6xl font-bold uppercase leading-tight drop-shadow-xl tracking-wide mb-4">
+            Variadores
+        </h1>
+    </div>
+
+</section>
+
+<!-- SECCIÓN INTERNA: CATÁLOGO OPTIDRIVE -->
+<div class="max-w-6xl mx-auto px-6 py-12 space-y-20 font-['Montserrat',_sans-serif]">
+    
+    <!-- ================= BLOQUE 1: USO GENERAL ================= -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        
+        <!-- Textos -->
+        <div class="space-y-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#00509d] uppercase leading-tight">
+                Variadores de uso general
+            </h2>
+            <h3 class="text-xl md:text-2xl font-bold text-[#5a5482] uppercase mb-6">
+                Optidrive E3
+            </h3>
+            
+            <ul class="space-y-3 text-sm md:text-base text-gray-800 font-medium">
+                <li class="flex items-start">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                    Variadores compactos, fiables y fáciles de usar
+                </li>
+                <li class="flex items-start">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                    Amplia gama de carcasas IP20 e IP66
+                </li>
+                <li class="flex items-start">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                    Puesta en marcha sencilla
+                </li>
+                <li class="flex items-start">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                    Control de teclado intuitivo
+                </li>
+                <li class="flex items-start">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                    Modos de aplicación industrial, bomba y ventilador
+                </li>
+                <li class="flex items-start">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                    Filtro EMC interno de categoría C1
+                </li>
+                <li class="flex items-start">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                    Opción para motores monofásicos
+                </li>
+            </ul>
+        </div>
+
+        <!-- Imagen -->
+        <div class="flex justify-center md:justify-end">
+            <!-- Recuerda colocar el nombre exacto de tu imagen -->
+            <img src="Productos/Variadores/Imagen1.jpg" alt="Optidrive E3" class="w-full max-w-md object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500">
+        </div>
+        
+    </div>
+
+    <!-- ================= BLOQUE 2: ALTO DESEMPEÑO ================= -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        
+        <!-- Textos -->
+        <div class="space-y-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#00509d] uppercase leading-tight">
+                Variadores de frecuencia de alto desempeño
+            </h2>
+            <h3 class="text-xl md:text-2xl font-bold text-[#5a5482] uppercase mb-6">
+                Optidrive P2
+            </h3>
+            
+            <ul class="space-y-3 text-sm md:text-base text-gray-800 font-medium">
+                <li class="flex items-start">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                    Variadores para las aplicaciones más exigentes
+                </li>
+                <li class="flex items-start">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                    150% de sobrecarga durante 60 segundos
+                </li>
+                <li class="flex items-start">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                    200% de sobrecarga durante 4 segundos
+                </li>
+                <li class="flex items-start">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                    Control vectorial sin sensores
+                </li>
+                <li class="flex items-start">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                    Control de motores PM
+                </li>
+                <li class="flex items-start">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                    Filtro EMC incorporado
+                </li>
+                <li class="flex items-start">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                    Con transistor de frenado integral
+                </li>
+            </ul>
+        </div>
+
+        <!-- Imagen -->
+        <div class="flex justify-center md:justify-end">
+            <img src="Productos/Variadores/Imagen2.jpg" alt="Optidrive P2" class="w-full max-w-md object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500">
+        </div>
+        
+    </div>
+
+    <!-- ================= BLOQUE 3: APLICACIONES ESPECÍFICAS ================= -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        
+        <!-- Textos -->
+        <div class="space-y-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#00509d] uppercase leading-tight mb-6">
+                Variadores de frecuencia para aplicaciones específicas
+            </h2>
+            
+            <!-- ECO HVAC -->
+            <div class="mb-6">
+                <h3 class="text-xl md:text-2xl font-bold text-[#5a5482] uppercase mb-4">
+                    Optidrive ECO HVAC
+                </h3>
+                <ul class="space-y-3 text-sm md:text-base text-gray-800 font-medium">
+                    <li class="flex items-start">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                        Control de motor vectorial Eco
+                    </li>
+                    <li class="flex items-start">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                        Diseñado para optimizar la energía
+                    </li>
+                    <li class="flex items-start">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                        Filtro EMC interno
+                    </li>
+                    <li class="flex items-start">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                        Funcionamiento silencioso
+                    </li>
+                </ul>
+            </div>
+
+            <!-- ECO PUMP -->
+            <div>
+                <h3 class="text-xl md:text-2xl font-bold text-[#5a5482] uppercase mb-4">
+                    Optidrive ECO PUMP
+                </h3>
+                <ul class="space-y-3 text-sm md:text-base text-gray-800 font-medium">
+                    <li class="flex items-start">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                        Control total desde un "Drive Master"
+                    </li>
+                    <li class="flex items-start">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                        Conexión sencilla
+                    </li>
+                    <li class="flex items-start">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                        Niveles de presión y flujo consistentes sin importar el número de bombas
+                    </li>
+                    <li class="flex items-start">
+                        <span class="w-2.5 h-2.5 rounded-full bg-[#ffc107] mt-1.5 mr-3 shrink-0"></span>
+                        Reducción de tiempo de inactividad
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Imagen -->
+        <div class="flex justify-center md:justify-end">
+            <img src="Productos/Variadores/Imagen2.jpg" alt="Optidrive Eco HVAC y Pump" class="w-full max-w-md object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500">
+        </div>
+        
+    </div>
+
+</div>
+        <!-- ==========================================
+     SECCIÓN: TRANSICIÓN (IMAGEN PLANTA) 
+     ========================================== -->
+<div class="relative w-full h-48 md:h-72 overflow-hidden">
+    <!-- Etiqueta de Video Nativo -->
+        <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2"
+        >
+            <!-- AQUÍ PONES EL NOMBRE DE TU VIDEO DESCARGADO -->
+            <source src="Productos/Variadores/variadores.mp4" type="video/mp4">
+        </video>
+
+
+
+    <!-- Gradiente que oscurece la foto hacia abajo para fundirse con la siguiente sección -->
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1a1a1a]"></div>
+</div>
+
+   <!-- ==========================================
+     SECCIÓN: LÍNEA COMPLETA (FONDO OSCURO) 
+     ========================================== -->
+<section class="bg-[#1a1a1a] text-white py-12 px-6 font-['Montserrat',_sans-serif]">
+    <div class="max-w-6xl mx-auto text-center">
+        
+        <h2 class="text-2xl md:text-3xl font-bold mb-10 tracking-wide">
+            LÍNEA COMPLETA
+        </h2>
+
+        <!-- Lista de enlaces separada por líneas | -->
+        
+        <!-- Fila 1 de enlaces -->
+        <div class="flex flex-wrap justify-center items-center gap-y-6 text-[10px] md:text-sm font-medium">
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">OPTIDRIVE ECO PUMP</span>
+            <span class="border-l border-white/50 h-5"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">OPTIDRIVE P2</span>
+            <span class="border-l border-white/50 h-5"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">OPTIDRIVE P2</span>
+            <span class="border-l border-white/50 h-5 hidden md:block"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors mt-2 md:mt-0">OPTIDRIVE P2 <br>SOLAR PUMP</span>
+            <span class="border-l border-white/50 h-5 mt-2 md:mt-0"></span>
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">OPTIDRIVE <br>ELEVATOR </span>
+        </div>
+          <!-- Botón (Derecha) -->
+            <div class="w-full flex justify-cente flex justify-center lg:items-center mt-4 lg:mt-0">
+                <a href="Contacto.html" class="bg-[#ffc107] hover:bg-[#ffb300] text-black font-bold text-sm md:text-base uppercase px-10 py-4 rounded-full shadow-xl hover:scale-105 transition-all text-center leading-tight">
+                    Quiero cotizar<br>ahora
+                </a>
+            </div>
+    </div>
+</section>   
+
+<footer id="contacto" class="relative bg-[#0a192f] font-['Montserrat',_sans-serif] flex overflow-hidden">
+    
+
+    <img 
+        src="Fondo-azul.jpg" 
+        alt="Fondo Lámina Verde" 
+        class="absolute inset-0 w-full h-full object-cover z-0 mix-blend-overlay opacity-80"
+    >
+
+    <!-- Contenedor Flex Principal (Alineado al fondo) -->
+    <div class="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-end justify-between">
+        
+        <!-- LADO IZQUIERDO (Íconos en línea + Línea Blanca + Texto Inferior) -->
+        <div class="w-full md:flex-1 flex flex-col pt-10 pb-3 pl-4 pr-6 md:pl-8 md:pr-10">
+            
+            <!-- Contenedor de los 4 Íconos en Línea -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-white text-center items-end mb-5">
+                
+                <!-- 1. Horario -->
+                <div class="flex flex-col items-center justify-end h-full">
+                    <img src="tiempo.png" alt="Horario" class="h-10 md:h-12 object-contain mb-2">
+                    <h4 class="font-bold text-xs md:text-sm mb-1">Horario de Atención</h4>
+                    <p class="text-[10px] md:text-xs leading-tight">Lun - Vie | 09:30 a 18:30 HRS<br>Sab | 9:30 a 15:30 HRS</p>
+                </div>
+
+                <!-- 2. Ubicación  -->
+                <a href="https://maps.app.goo.gl/EZtrTciufw9fJPoB9" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform cursor-pointer relative z-20">
+                <img src="ubicacion.png" alt="Ubicación" class="h-10 md:h-12 object-contain mb-2">
+                 <p class="text-xs md:text-sm">Oriente 10 #718, Orizaba</p>
+                    </a>
+                <!-- 3. Teléfono / WhatsApp -->
+                <a href="https://wa.me/522721498040" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform">
+                    <img src="telefono.png" alt="Teléfono" class="h-10 md:h-12 object-contain mb-2">
+                    <p class="text-xs md:text-sm">(272) 149 8040</p>
+                </a>
+
+                <!-- 4. Sitio Web -->
+                <a href="https://www.fph.com.mx" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform">
+                    <img src="Sitio web.png" alt="Sitio Web" class="h-10 md:h-12 object-contain mb-2">
+                    <p class="text-xs md:text-sm">www.fph.com.mx</p>
+                </a>
+            </div>
+
+            <!-- Línea Blanca Gruesa -->
+            <div class="w-full h-1 md:h-1.5 bg-white mb-2"></div>
+
+            <!-- Texto Inferior (Letras Chiquitas) -->
+            <p class="text-white text-xs md:text-sm font-bold tracking-wide">
+                FRIO POTENCIA Y HERRAMIENTAS S.A. DE C.V.
+            </p>
+        </div>
+
+        <div class="w-40 md:w-56 shrink-0 flex items-end justify-center">
+            <a href="#inicio" title="Volver al Inicio">
+                <img 
+                    src="fph-logo-rojo.png" 
+                    alt="Logo FPH Rojo" 
+                    class="w-full h-auto object-cover drop-shadow-2xl hover:brightness-110 transition-all"
+                >
+            </a>
+        </div>
+        
+    </div>
+</footer>

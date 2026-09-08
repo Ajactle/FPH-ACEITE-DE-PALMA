@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPH - Soluciones para Aceite de Palma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+</style>
+<!-- ENCABEZADO / NAVBAR TRANSPARENTE (Estilo Imagen 2) -->
+<nav class="absolute top-0 left-0 w-full z-50 font-['Montserrat',_sans-serif]">
+    <div class="max-w-7xl mx-auto px-6 py-5 md:py-6 flex justify-between items-center">
+        
+        <!-- LADO IZQUIERDO: Logo -->
+        <div class="flex items-center">
+            <!-- Si tu logo actual es oscuro, puedes agregar temporalmente las clases "brightness-0 invert" para forzarlo a verse blanco -->
+            <img src="fph-logo-blanco.png" alt="Logo FPH" class="h-24 md:h-24 object-contain brightness-0 invert md:brightness-100 md:invert-0">
+        </div>
+
+        <!-- CENTRO: Enlaces de Navegación (Centrados y en Blanco) -->
+        <div class="hidden md:flex flex-1 justify-center items-center gap-10 text-white text-sm md:text-base font-semibold tracking-wide">
+            <a href="index.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                INICIO
+            </a>
+            <a href="Nosotros.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                NOSOTROS 
+            </a>
+               <!-- ENLACE DE PRODUCTOS CON DROPDOWN (Estilo Burbuja Gris) -->
+                <div class="relative group h-full flex items-center">
+                    
+                    <a href="Productos.html" class="flex items-center gap-1.5 hover:text-gray-300 transition-colors drop-shadow-md py-4 cursor-pointer">
+                        PRODUCTOS <i class="fas fa-chevron-down text-[10px] opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
+                    
+                    <!-- Contenedor del Dropdown (Aparece al hacer hover) -->
+                    <div class="absolute left-1/2 -translate-x-1/2 top-[100%] pt-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
+                        
+                        <!-- Caja visible del menú (Fondo gris, esquinas redondeadas) -->
+                        <div class="bg-[#e5e7eb] rounded-[24px] shadow-2xl py-3 w-56 flex flex-col text-[#0f172a]">
+
+                            <a href="Reductores.html" class="block px-6 py-2.5 text-sm font-medium hover:text-[#2e7d32] hover:bg-gray-300 transition-colors">
+                                REDUCTORES
+                            </a>
+                            <a href="Variadores.html" class="block px-6 py-2.5 text-sm font-medium hover:text-[#2e7d32] hover:bg-gray-300 transition-colors">
+                                VARIADORES
+                            </a>
+                            <a href="Motores.html" class="block px-6 py-2.5 text-sm font-medium hover:text-[#2e7d32] hover:bg-gray-300 transition-colors">
+                                MOTORES
+                            </a>
+                            <a href="Motion-control.html" class="block px-6 py-2.5 text-sm font-medium hover:text-[#2e7d32] hover:bg-gray-300 transition-colors">
+                                MOTION CONTROL DRIVES 
+                            </a>
+                            <a href="Motorreductores.html" class="block px-6 py-2.5 text-sm font-medium hover:text-[#2e7d32] hover:bg-gray-300 transition-colors">
+                                MOTORREDUCTORES 
+                            </a>
+                            <a href="Acoplamiento.html" class="block px-6 py-2.5 text-sm font-medium hover:text-[#2e7d32] hover:bg-gray-300 transition-colors">
+                                ACOPLAMIENTO 
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                
+            <a href="Servicios.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                SERVICIOS
+            </a>
+            <a href="Contacto.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                CONTACTO
+            </a>
+        </div>
+
+        <!-- LADO DERECHO: Menú Móvil (Solo visible en celulares) -->
+        <div class="md:hidden flex items-center">
+            <button class="text-white text-3xl focus:outline-none drop-shadow-md">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+    </div>
+</nav>
+    <!-- SECCIÓN PRINCIPAL (HERO) CON VIDEO LOCAL Y CORTE EN "V" -->
+<section id="inicio" class="relative font-['Montserrat',_sans-serif] flex flex-col w-full h-[80vh] md:h-[98vh] overflow-hidden" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 95%, 0 100%);">
+    
+    <div class="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none bg-[#0a192f]">
+        <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2"
+        >
+       <source src="Inicio/video2.mp4" type="video/mp4">
+        </video>
+     </div>
+    
+    <!-- Filtro oscuro reforzado para que las letras blancas resalten perfecto sobre el video -->
+             <div class="absolute inset-0 bg-[#0a192f]/60 z-10"></div>
+              
+               
+       <div class="relative z-20 w-full h-full max-w-6xl mx-auto px-6 flex flex-col items-start justify-center text-left pt-10">
+    
+    <!-- Imagen de Soluciones MRO (Reemplaza el texto) -->
+    <!-- Sustituye 'soluciones-mro.png' por el nombre exacto de tu archivo -->
+    <img src="o (2).png" alt="Soluciones MRO" class="w-full max-w-xs md:max-w-md lg:max-w-xl object-contain drop-shadow-xl mb-6">
+    
+    <!-- Aquí debajo puedes dejar el botón de WhatsApp que ya tenías -->
+
+</div>
+
+                </div>
+            </section>
+
+                <!-- ==========================================
+     SECCIÓN: SUMITOMO DRIVE TECHNOLOGIES
+     ========================================== -->
+<section class="bg-white py-16 px-6 font-['Montserrat',_sans-serif]">
+    <div class="max-w-5xl mx-auto flex flex-col items-center">
+        
+        <!-- 1. Logo Sumitomo -->
+        <!-- Sustituye 'logo-sumitomo.png' por tu archivo -->
+        <img src="Sumitomo_Drive_Technologiles_logo.svg.png" alt="Sumitomo Drive Technologies" class="w-full max-w-md object-contain mb-8">
+            <!-- 2. Imágenes de Productos (Fila de reductores y variadores) -->
+        <img src="Imagen_fondo.png" alt="Gama de Productos" class="w-full max-w-3xl object-contain mb-12 drop-shadow-md hover:scale-105 transition-transform duration-500">
+        </div>
+
+        <!-- 3. Lista de Características (Líneas subrayadas) -->
+        <div class="w-full flex flex-col mb-16">
+            
+            <!-- Línea 1 -->
+            <div class="border-b-2 border-black py-3 text-sm md:text-base lg:text-lg">
+                <span class="text-[#004b93] font-medium">Reductores de velocidad</span> 
+                <span class="text-gray-900">con una amplia gama de relaciones de velocidad</span>
+            </div>
+            
+            <!-- Línea 2 -->
+            <div class="border-b-2 border-black py-3 text-sm md:text-base lg:text-lg">
+                <span class="text-[#004b93] font-medium">Motores eléctricos</span> 
+                <span class="text-gray-900">de eficiencia PREMIUM e Inverter</span>
+            </div>
+            
+            <!-- Línea 3 -->
+            <div class="border-b-2 border-black py-3 text-sm md:text-base lg:text-lg">
+                <span class="text-[#004b93] font-medium">Variadores de velocidad</span> 
+                <span class="text-gray-900">de alto grado de protección y fácil integración</span>
+            </div>
+            
+            <!-- Línea 4 -->
+            <div class="border-b-2 border-black py-3 text-sm md:text-base lg:text-lg">
+                <span class="text-[#004b93] font-medium">Sistema de control</span> 
+                <span class="text-gray-900">amigable y centralizado</span>
+            </div>
+            
+            <!-- Línea 5 -->
+            <div class="border-b-2 border-black py-3 text-sm md:text-base lg:text-lg">
+                <span class="text-[#004b93] font-medium">Monitoreo y control</span> 
+                <span class="text-gray-900">remoto</span>
+            </div>
+            
+        </div>
+
+        <!-- 4. Aplicaciones en la Industria -->
+        <div class="text-center mb-10">
+            <h2 class="text-[#2b50a1] text-xl md:text-2xl font-bold uppercase mb-4 tracking-wide">
+                Aplicaciones en la Industria
+            </h2>
+            <p class="text-gray-800 text-sm md:text-base max-w-3xl mx-auto leading-relaxed">
+                Los Reductores y los Motoreductores Sumitomo están diseñados para cubrir cada etapa del proceso productivo del aceite de palma.
+            </p>
+        </div>
+
+        <!-- 5. Aplicaciones con Experiencia (Cajas de Listas) -->
+        <h2 class="text-[#2b50a1] text-xl md:text-2xl font-bold uppercase mb-8 tracking-wide text-center">
+            Aplicaciones con Experiencia
+        </h2>
+
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-16">
+            
+            <!-- Columna Izquierda -->
+            <div class="bg-[#eef2f5] rounded-[2rem] p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow">
+                <ul class="space-y-4 text-sm md:text-base text-gray-800 font-medium">
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Cablestantes</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Desfrutadores</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Volteadores</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Elevadores de Cangilones</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Transportador Sinfin o Tornillo</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Digestores (3,000 a 6,000 litros)</li>
+                </ul>
+            </div>
+
+            <!-- Columna Derecha -->
+            <div class="bg-[#eef2f5] rounded-[2rem] p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow">
+                <ul class="space-y-4 text-sm md:text-base text-gray-800 font-medium">
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Prensas de Raquis (P5 a P25)</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Prensas de Palmiste</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Clarificadores</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Quebradores</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Despulpadores</li>
+                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Bandas Transportadoras</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Sustituye 'maquina-inferior.png' por tu archivo -->
+        <img src="Motores.png" alt="Motoreductor Sumitomo Aplicación" class="block mx-auto w-full max-w-2xl object-contain drop-shadow-xl hover:-translate-y-2 transition-transform duration-500">
+    </div>
+    </section>
+
+    <a href="https://wa.me/522721498040" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 hover:scale-110 transition-transform duration-300 flex items-center justify-center">
+    <!-- Cambia 'icono-whatsapp.png' por el nombre real de tu imagen -->
+    <img src="whatsapp.png" alt="Chat de WhatsApp" class="w-14 h-18 md:w-18 md:h-18 object-contain drop-shadow-[0_10px_20px_rgba(37,211,102,0.5)]">
+    </a>
+
+
+
+
+
+ <footer id="contacto" class="relative bg-[#0a192f] font-['Montserrat',_sans-serif] flex overflow-hidden">
+    
+
+    <img 
+        src="Fondo-azul.jpg" 
+        alt="Fondo Lámina Verde" 
+        class="absolute inset-0 w-full h-full object-cover z-0 mix-blend-overlay opacity-80"
+    >
+
+    <!-- Contenedor Flex Principal (Alineado al fondo) -->
+    <div class="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-end justify-between">
+        
+        <!-- LADO IZQUIERDO (Íconos en línea + Línea Blanca + Texto Inferior) -->
+        <div class="w-full md:flex-1 flex flex-col pt-10 pb-3 pl-4 pr-6 md:pl-8 md:pr-10">
+            
+            <!-- Contenedor de los 4 Íconos en Línea -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-white text-center items-end mb-5">
+                
+                <!-- 1. Horario -->
+                <div class="flex flex-col items-center justify-end h-full">
+                    <img src="tiempo.png" alt="Horario" class="h-10 md:h-12 object-contain mb-2">
+                    <h4 class="font-bold text-xs md:text-sm mb-1">Horario de Atención</h4>
+                    <p class="text-[10px] md:text-xs leading-tight">Lun - Vie | 09:30 a 18:30 HRS<br>Sab | 9:30 a 15:30 HRS</p>
+                </div>
+
+                <!-- 2. Ubicación  -->
+                <a href="https://maps.app.goo.gl/EZtrTciufw9fJPoB9" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform cursor-pointer relative z-20">
+                <img src="ubicacion.png" alt="Ubicación" class="h-10 md:h-12 object-contain mb-2">
+                 <p class="text-xs md:text-sm">Oriente 10 #718, Orizaba</p>
+                    </a>
+                <!-- 3. Teléfono / WhatsApp -->
+                <a href="https://wa.me/522721498040" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform">
+                    <img src="telefono.png" alt="Teléfono" class="h-10 md:h-12 object-contain mb-2">
+                    <p class="text-xs md:text-sm">(272) 149 8040</p>
+                </a>
+
+                <!-- 4. Sitio Web -->
+                <a href="https://www.fph.com.mx" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform">
+                    <img src="Sitio web.png" alt="Sitio Web" class="h-10 md:h-12 object-contain mb-2">
+                    <p class="text-xs md:text-sm">www.fph.com.mx</p>
+                </a>
+            </div>
+
+            <!-- Línea Blanca Gruesa -->
+            <div class="w-full h-1 md:h-1.5 bg-white mb-2"></div>
+
+            <!-- Texto Inferior (Letras Chiquitas) -->
+            <p class="text-white text-xs md:text-sm font-bold tracking-wide">
+                FRIO POTENCIA Y HERRAMIENTAS S.A. DE C.V.
+            </p>
+        </div>
+
+        <div class="w-40 md:w-56 shrink-0 flex items-end justify-center">
+            <a href="#inicio" title="Volver al Inicio">
+                <img 
+                    src="fph-logo-rojo.png" 
+                    alt="Logo FPH Rojo" 
+                    class="w-full h-auto object-cover drop-shadow-2xl hover:brightness-110 transition-all"
+                >
+            </a>
+        </div>
+        
+    </div>
+</footer>

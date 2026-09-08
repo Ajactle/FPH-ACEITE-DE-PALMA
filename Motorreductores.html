@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPH - Soluciones para Aceite de Palma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<nav class="absolute top-0 left-0 w-full z-50 font-['Montserrat',_sans-serif]">
+    <div class="max-w-7xl mx-auto px-6 py-5 md:py-6 flex justify-between items-center">
+        
+        <!-- LADO IZQUIERDO: Logo -->
+        <div class="flex items-center">
+            <!-- Tip: Como el fondo ahra es oscuro, te recomiendo usar una versión en blanco/clara de tu logo. -->
+            <img src="fph-logo-blanco.png" alt="Logo FPH" class="h-24 md:h-24 object-contain brightness-0 invert md:brightness-100 md:invert-0">
+        </div>
+         <!-- CENTRO: Enlaces de Navegación (Centrados y en Blanco) -->
+        <div class="hidden md:flex flex-1 justify-center items-center gap-10 text-white text-sm md:text-base font-semibold tracking-wide">
+            <a href="Index.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                INICIO
+            </a>
+            <a href="Nosotros.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                NOSOTROS
+            </a>
+            <a href="Productos.html" class="flex items-center gap-1.5 hover:text-gray-300 transition-colors group drop-shadow-md">
+                PRODUCTOS<i class="fas fa-chevron-down text-[10px] opacity-70 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+            <a href="Servicios.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                SERVICIOS
+            </a>
+            <a href="Contacto.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                CONTACTO
+            </a>
+        </div>
+
+        <!-- LADO DERECHO: Menú Móvil (Solo visible en celulares) -->
+        <div class="md:hidden flex items-center">
+            <button class="text-white text-3xl focus:outline-none drop-shadow-md">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+    </div>
+</nav>
+   <!-- SECCIÓN PRINCIPAL (HERO) CON VIDEO LOCAL Y CORTE EN "V" -->
+<section id="inicio" class="relative font-['Montserrat',_sans-serif] flex flex-col w-full h-[80vh] md:h-[98vh] overflow-hidden" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 95%, 0 100%);">
+    
+    <!-- Agregué un bg-[#0a192f] por si el video tarda 1 segundo en cargar, no se vea blanco -->
+    <div class="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none bg-[#0a192f]">
+        
+        <!-- Etiqueta de Video Nativo -->
+        <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2"
+        >
+            <!-- AQUÍ PONES EL NOMBRE DE TU VIDEO DESCARGADO -->
+            <source src="Productos/Motorreductores/Motorreductores.mp4" type="video/mp4">
+        </video>
+
+    </div>
+    
+    <!-- Filtro oscuro reforzado para que las letras blancas resalten perfecto sobre el video -->
+    <div class="absolute inset-0 bg-[#0a192f]/60 z-10"></div>
+
+    <!-- Contenido Centrado (Títulos) -->
+    <div class="relative z-20 w-full h-full max-w-5xl mx-auto px-6 flex flex-col items-center justify-center text-center pt-10">
+        
+        <!-- Título Principal -->
+        <h1 class="text-white text-4xl md:text-6xl font-bold uppercase leading-tight drop-shadow-xl tracking-wide mb-4">
+            Motorreductores
+        </h1>
+    </div>
+   
+</section>
+<!-- ==========================================
+     SECCIÓN: CATÁLOGO DE PRODUCTOS (FONDO CLARO) 
+     ========================================== -->
+<section class="relative bg-[#f8f9fa] pt-12 pb-20 px-6 font-['Montserrat',_sans-serif] overflow-hidden">
+    
+    <!-- Imagen Principal (Los 3 reductores grandes arriba) -->
+    <div class="flex justify-center mb-16 relative z-10">
+        <!-- Reemplaza con tu imagen real -->
+        <img src="Productos/Motorreductores/Imagen_001.png" alt="Familia de Reductores" class="w-full max-w-4xl object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500">
+    </div>
+
+    <!-- Contenedor de Tarjetas -->
+    <div class="max-w-6xl mx-auto space-y-16 relative z-10">
+        
+        <!-- PRIMERA FILA: 4 Tarjetas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-6">
+            
+            <!-- 1. CYCLO 6000 -->
+            <div class="relative border-2 border-[#004b93] bg-white p-5 text-center shadow-md flex flex-col justify-center min-h-[140px]">
+                <h3 class="text-[#004b93] font-bold text-sm md:text-base mb-2">CYCLO 6000</h3>
+                <p class="text-xs text-gray-700 mb-2 leading-tight">Trabajo sin engranes con<br>discos cicloidales</p>
+                <p class="text-xs text-gray-700 leading-tight">Hasta un 500% de<br>sobrecarga</p>
+                <!-- Mini Imagen Flotante -->
+                <img src="Productos/Motorreductores/Imagen-1-1.png" alt="Paramax" class="absolute -bottom-6 -left-8 w-20 md:w-24 object-contain drop-shadow-md hover:-translate-y-1 transition-transform">
+            </div>
+
+            <!-- 2. BEVEL BUDDY BOX 4 -->
+            <div class="relative border-2 border-[#004b93] bg-white p-5 text-center shadow-md flex flex-col justify-center min-h-[140px]">
+                <h3 class="text-[#004b93] font-bold text-sm md:text-base mb-2">BEVEL BUDDY BOX </h3>
+                <p class="text-xs text-gray-700 mb-2 leading-tight">Motorreductor de ángulo<br>recto</p>
+                <p class="text-xs text-gray-700 leading-tight">De acero endurecido</p>
+                <!-- Mini Imagen Flotante -->
+                <img src="Productos/Motorreductores/Imagen2.png" alt="Hansen P4" class="absolute -bottom-6 -left-8 w-20 md:w-24 object-contain drop-shadow-md hover:-translate-y-1 transition-transform">
+            </div>
+
+            <!-- 3. HYPONIC -->
+            <div class="relative border-2 border-[#004b93] bg-white p-5 text-center shadow-md flex flex-col justify-center min-h-[140px]">
+                <h3 class="text-[#004b93] font-bold text-sm md:text-base mb-2">HYPONIC</h3>
+                <p class="text-xs text-gray-700 mb-2 leading-tight">Compacto</p>
+                <p class="text-xs text-gray-700 leading-tight">Con tecnología patentada<br>con engranajes de acero</p>
+                <!-- Mini Imagen Flotante -->
+                <img src="Productos/Motorreductores/Imagen1.png" alt="Hansen M5CT" class="absolute -bottom-6 -left-8 w-20 md:w-24 object-contain drop-shadow-md hover:-translate-y-1 transition-transform">
+            </div>
+
+            <!-- 4. BEVEL BUDDYBOX H  -->
+            <div class="relative border-2 border-[#004b93] bg-white p-5 text-center shadow-md flex flex-col justify-center min-h-[140px]">
+                <h3 class="text-[#004b93] font-bold text-sm md:text-base mb-2">BEVEL BUDDYBOX H</h3>
+                <p class="text-xs text-gray-700 leading-tight">Motorreductor compacto<br>de ángulo recto</p>
+                                <p class="text-xs text-gray-700 leading-tight">Con rango de reducción<br>bajo y con eje hueco</p>
+
+                <!-- Mini Imagen Flotante -->
+                <img src="Productos/Motorreductores/Imagen6.jpg" alt="Hansen M4" class="absolute -bottom-6 -left-2 w-12 md:w-16 object-contain drop-shadow-md hover:-translate-y-1 transition-transform">
+            </div>
+
+        </div>
+
+        <!-- SEGUNDA FILA: 2 Tarjetas + Botón de Cotizar -->
+        <div class="flex flex-col lg:flex-row justify-between items-center gap-12 lg:gap-8">
+            
+            <!-- Grupo de las 2 tarjetas (Izquierda) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-6 w-full lg:w-7/12">
+                
+                <!-- 5. FORTRESS -->
+                <div class="relative border-2 border-[#004b93] bg-white p-5 text-center shadow-md flex flex-col justify-center min-h-[140px]">
+                    <h3 class="text-[#004b93] font-bold text-sm md:text-base mb-2">FORTRESS</h3>
+                    <p class="text-xs text-gray-700 mb-2 leading-tight">Motorreductor de acero<br>inoxidable</p>
+                    <p class="text-xs text-gray-700 leading-tight">Lubricación con grasa<br>grado alimenticio</p>
+                    <!-- Mini Imagen Flotante -->
+                    <img src="Productos/Motorreductores/Imagen3.png" alt="Compower" class="absolute -bottom-6 -left-8 w-20 md:w-24 object-contain drop-shadow-md hover:-translate-y-1 transition-transform">
+                </div>
+
+                <!-- 6. HELLICAL BUDDY BOX -->
+                <div class="relative border-2 border-[#004b93] bg-white p-5 text-center shadow-md flex flex-col justify-center min-h-[140px]">
+                    <h3 class="text-[#004b93] font-bold text-sm md:text-base mb-2 leading-tight">HELLICAL BUDDY<br>BOX </h3>
+                    <p class="text-xs text-gray-700 mb-2 leading-tight">Caja con engranajes<br>helicoidales de ejes paralelos</p>
+                    <p class="text-xs text-gray-700 leading-tight">Torque denso y compacto<br>en relaciones altas</p>
+                    <!-- Mini Imagen Flotante -->
+                    <img src="Productos/Motorreductores/Imagen4.png" alt="Cyclo Overhead" class="absolute -bottom-6 -left-6 w-16 md:w-20 object-contain drop-shadow-md hover:-translate-y-1 transition-transform">
+                </div>
+
+            </div>
+
+            <!-- Botón (Derecha) -->
+            <div class="w-full lg:w-4/12 flex justify-center lg:justify-end mt-4 lg:mt-0">
+                <a href="Contacto.html" class="bg-[#ffc107] hover:bg-[#ffb300] text-black font-bold text-sm md:text-base uppercase px-10 py-4 rounded-full shadow-xl hover:scale-105 transition-all text-center leading-tight">
+                    Quiero cotizar<br>ahora
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div class="relative w-full h-48 md:h-72 overflow-hidden">
+    <!-- Etiqueta de Video Nativo -->
+        <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2"
+        >
+            <!-- AQUÍ PONES EL NOMBRE DE TU VIDEO DESCARGADO -->
+            <source src="Productos/Motorreductores/Motorreductores1.mp4" type="video/mp4">
+        </video>
+
+
+
+    <!-- Gradiente que oscurece la foto hacia abajo para fundirse con la siguiente sección -->
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1a1a1a]"></div>
+</div>
+
+<!-- ==========================================
+     SECCIÓN: LÍNEA COMPLETA (FONDO OSCURO) 
+     ========================================== -->
+<section class="bg-[#1a1a1a] text-white py-12 px-6 font-['Montserrat',_sans-serif]">
+    <div class="max-w-6xl mx-auto text-center">
+        
+        <h2 class="text-2xl md:text-3xl font-bold mb-10 tracking-wide">
+            LÍNEA COMPLETA
+        </h2>
+
+        <!-- Lista de enlaces separada por líneas | -->
+        
+        <!-- Fila 1 de enlaces -->
+        <div class="flex flex-wrap justify-center items-center gap-y-6 text-[10px] md:text-sm font-medium">
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">ALTAX</span>
+            <span class="border-l border-white/50 h-5"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">ASTERO</span>
+            <span class="border-l border-white/50 h-5"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">BEIER</span>
+            <span class="border-l border-white/50 h-5 hidden md:block"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors mt-2 md:mt-0">CYCLO</span>
+            <span class="border-l border-white/50 h-5 mt-2 md:mt-0"></span>
+            
+             <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">CYCLO BEVEL BUDDYBOX</span>
+            <span class="border-l border-white/50 h-5"></span>
+
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">FORTRESS</span>
+
+           
+        </div>
+            
+        <!-- Fila 2 de enlaces -->
+        <div class="flex flex-wrap justify-center items-center gap-y-6 text-[10px] md:text-sm font-medium mt-6 md:mt-8">
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors text-center leading-tight">HEDCON</span>
+            <span class="border-l border-white/50 h-5"></span>
+
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors text-center leading-tight">HYPONIC</span>
+            <span class="border-l border-white/50 h-5"></span>
+            
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">HSM</span>
+            <span class="border-l border-white/50 h-5"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">PREST NEO</span>
+            <span class="border-l border-white/50 h-5"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">RHYTAX</span>
+
+
+        </div>
+
+    </div>
+</section>   
+
+<footer id="contacto" class="relative bg-[#0a192f] font-['Montserrat',_sans-serif] flex overflow-hidden">
+    
+
+    <img 
+        src="Fondo-azul.jpg" 
+        alt="Fondo Lámina Verde" 
+        class="absolute inset-0 w-full h-full object-cover z-0 mix-blend-overlay opacity-80"
+    >
+
+    <!-- Contenedor Flex Principal (Alineado al fondo) -->
+    <div class="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-end justify-between">
+        
+        <!-- LADO IZQUIERDO (Íconos en línea + Línea Blanca + Texto Inferior) -->
+        <div class="w-full md:flex-1 flex flex-col pt-10 pb-3 pl-4 pr-6 md:pl-8 md:pr-10">
+            
+            <!-- Contenedor de los 4 Íconos en Línea -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-white text-center items-end mb-5">
+                
+                <!-- 1. Horario -->
+                <div class="flex flex-col items-center justify-end h-full">
+                    <img src="tiempo.png" alt="Horario" class="h-10 md:h-12 object-contain mb-2">
+                    <h4 class="font-bold text-xs md:text-sm mb-1">Horario de Atención</h4>
+                    <p class="text-[10px] md:text-xs leading-tight">Lun - Vie | 09:30 a 18:30 HRS<br>Sab | 9:30 a 15:30 HRS</p>
+                </div>
+
+                <!-- 2. Ubicación  -->
+                <a href="https://maps.app.goo.gl/EZtrTciufw9fJPoB9" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform cursor-pointer relative z-20">
+                <img src="ubicacion.png" alt="Ubicación" class="h-10 md:h-12 object-contain mb-2">
+                 <p class="text-xs md:text-sm">Oriente 10 #718, Orizaba</p>
+                    </a>
+                <!-- 3. Teléfono / WhatsApp -->
+                <a href="https://wa.me/522721498040" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform">
+                    <img src="telefono.png" alt="Teléfono" class="h-10 md:h-12 object-contain mb-2">
+                    <p class="text-xs md:text-sm">(272) 149 8040</p>
+                </a>
+
+                <!-- 4. Sitio Web -->
+                <a href="https://www.fph.com.mx" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform">
+                    <img src="Sitio web.png" alt="Sitio Web" class="h-10 md:h-12 object-contain mb-2">
+                    <p class="text-xs md:text-sm">www.fph.com.mx</p>
+                </a>
+            </div>
+
+            <!-- Línea Blanca Gruesa -->
+            <div class="w-full h-1 md:h-1.5 bg-white mb-2"></div>
+
+            <!-- Texto Inferior (Letras Chiquitas) -->
+            <p class="text-white text-xs md:text-sm font-bold tracking-wide">
+                FRIO POTENCIA Y HERRAMIENTAS S.A. DE C.V.
+            </p>
+        </div>
+
+        <div class="w-40 md:w-56 shrink-0 flex items-end justify-center">
+            <a href="#inicio" title="Volver al Inicio">
+                <img 
+                    src="fph-logo-rojo.png" 
+                    alt="Logo FPH Rojo" 
+                    class="w-full h-auto object-cover drop-shadow-2xl hover:brightness-110 transition-all"
+                >
+            </a>
+        </div>
+        
+    </div>
+</footer>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPH - Soluciones para Aceite de Palma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<nav class="absolute top-0 left-0 w-full z-50 font-['Montserrat',_sans-serif]">
+    <div class="max-w-7xl mx-auto px-6 py-5 md:py-6 flex justify-between items-center">
+        
+        <!-- LADO IZQUIERDO: Logo -->
+        <div class="flex items-center">
+            <!-- Tip: Como el fondo ahora es oscuro, te recomiendo usar una versión en blanco/clara de tu logo. -->
+            <!-- Si tu logo actual es oscuro, puedes agregar temporalmente las clases "brightness-0 invert" para forzarlo a verse blanco -->
+            <img src="fph-logo-blanco.png" alt="Logo FPH" class="h-24 md:h-24 object-contain brightness-0 invert md:brightness-100 md:invert-0">
+        </div>
+
+         <!-- CENTRO: Enlaces de Navegación (Centrados y en Blanco) -->
+        <div class="hidden md:flex flex-1 justify-center items-center gap-10 text-white text-sm md:text-base font-semibold tracking-wide">
+            <a href="Index.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                INICIO
+            </a>
+            <a href="Nosotros.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                NOSOTROS 
+            </a>
+            <a href="Productos.html" class="flex items-center gap-1.5 hover:text-gray-300 transition-colors group drop-shadow-md">
+                PRODUCTOS <i class="fas fa-chevron-down text-[10px] opacity-70 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+            <a href="Servicios.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                SERVICIOS
+            </a>
+            <a href="Contacto.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                CONTACTO
+            </a>
+        </div>
+
+        <!-- LADO DERECHO: Menú Móvil (Solo visible en celulares) -->
+        <div class="md:hidden flex items-center">
+            <button class="text-white text-3xl focus:outline-none drop-shadow-md">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+    </div>
+</nav>
+   <!-- SECCIÓN PRINCIPAL (HERO) CON VIDEO LOCAL Y CORTE EN "V" -->
+<section id="inicio" class="relative font-['Montserrat',_sans-serif] flex flex-col w-full h-[80vh] md:h-[98vh] overflow-hidden" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 95%, 0 100%);">
+    
+  
+    <!-- Agregué un bg-[#0a192f] por si el video tarda 1 segundo en cargar, no se vea blanco -->
+    <div class="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none bg-[#0a192f]">
+        
+        <!-- Etiqueta de Video Nativo -->
+        <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2"
+        >
+            <!-- AQUÍ PONES EL NOMBRE DE TU VIDEO DESCARGADO -->
+            <source src="Productos/Motion control/Motioncontrol1.mp4" type="video/mp4">
+        </video>
+
+    </div>
+    
+    <!-- Filtro oscuro reforzado para que las letras blancas resalten perfecto sobre el video -->
+    <div class="absolute inset-0 bg-[#0a192f]/60 z-10"></div>
+
+    <!-- Contenido Centrado (Títulos) -->
+    <div class="relative z-20 w-full h-full max-w-5xl mx-auto px-6 flex flex-col items-center justify-center text-center pt-10">
+        
+        <!-- Título Principal -->
+        <h1 class="text-white text-4xl md:text-6xl font-bold uppercase leading-tight drop-shadow-xl tracking-wide mb-4">
+            Motion control
+        </h1>
+    </div>
+   </section>
+   <!-- ==========================================
+     SECCIÓN: FAMILIA FINE CYCLO
+     ========================================== -->
+<div class="relative w-full max-w-6xl mx-auto px-6 py-16 font-['Montserrat',_sans-serif]">
+    
+    <!-- PARTE SUPERIOR: Imagen Principal y Botón -->
+    <div class="flex flex-col md:flex-row items-center justify-between mb-16 gap-10">
+        
+        <!-- Imagen de los componentes -->
+        <div class="w-full md:w-2/3 flex justify-center md:justify-start relative z-10">
+            <!-- Sustituye 'imagen-fine-cyclo.png' por el nombre de tu archivo -->
+            <img src="Productos/Motion control/3_imagen.png" alt="Componentes Fine Cyclo" class="w-full max-w-2xl object-contain drop-shadow-2xl">
+        </div>
+
+        <!-- Botón Cotizar -->
+        <div class="w-full md:w-1/3 flex justify-center md:justify-end relative z-10">
+            <a href="Contacto.html" class="bg-[#ffc107] hover:bg-[#ffb300] text-black font-bold text-lg md:text-xl uppercase px-10 py-3 rounded-full shadow-xl hover:scale-105 transition-transform text-center tracking-wide">
+                Quiero cotizar
+            </a>
+        </div>
+        
+    </div>
+
+    <!-- PARTE INFERIOR: Cuadrícula de 8 Cajas -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 relative z-10">
+        
+        <!-- Caja 1 -->
+        <div class="bg-white border-2 border-[#00509d] py-6 px-4 flex items-center justify-center text-center shadow-[0_15px_30px_-5px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-transform">
+            <h3 class="text-[#00509d] font-bold text-sm md:text-base uppercase leading-snug">
+                Fine Cyclo<br>Serie A Tipo FC
+            </h3>
+        </div>
+
+        <!-- Caja 2 -->
+        <div class="bg-white border-2 border-[#00509d] py-6 px-4 flex items-center justify-center text-center shadow-[0_15px_30px_-5px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-transform">
+            <h3 class="text-[#00509d] font-bold text-sm md:text-base uppercase leading-snug">
+                Fine Cyclo<br>Serie A Tipo F1C
+            </h3>
+        </div>
+
+        <!-- Caja 3 -->
+        <div class="bg-white border-2 border-[#00509d] py-6 px-4 flex items-center justify-center text-center shadow-[0_15px_30px_-5px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-transform">
+            <h3 class="text-[#00509d] font-bold text-sm md:text-base uppercase leading-snug">
+                Fine Cyclo<br>Serie A Tipo F2C
+            </h3>
+        </div>
+
+        <!-- Caja 4 -->
+        <div class="bg-white border-2 border-[#00509d] py-6 px-4 flex items-center justify-center text-center shadow-[0_15px_30px_-5px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-transform">
+            <h3 class="text-[#00509d] font-bold text-sm md:text-base uppercase leading-snug">
+                Fine Cyclo<br>Serie A Tipo F3C
+            </h3>
+        </div>
+
+        <!-- Caja 5 -->
+        <div class="bg-white border-2 border-[#00509d] py-6 px-4 flex items-center justify-center text-center shadow-[0_15px_30px_-5px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-transform">
+            <h3 class="text-[#00509d] font-bold text-sm md:text-base uppercase leading-snug">
+                Fine Cyclo<br>Serie D
+            </h3>
+        </div>
+
+        <!-- Caja 6 -->
+        <div class="bg-white border-2 border-[#00509d] py-6 px-4 flex items-center justify-center text-center shadow-[0_15px_30px_-5px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-transform">
+            <h3 class="text-[#00509d] font-bold text-sm md:text-base uppercase leading-snug">
+                Fine Cyclo<br>Serie T
+            </h3>
+        </div>
+
+        <!-- Caja 7 -->
+        <div class="bg-white border-2 border-[#00509d] py-6 px-4 flex items-center justify-center text-center shadow-[0_15px_30px_-5px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-transform">
+            <h3 class="text-[#00509d] font-bold text-sm md:text-base uppercase leading-snug">
+                Fine Cyclo<br>Serie W
+            </h3>
+        </div>
+
+        <!-- Caja 8 -->
+        <div class="bg-white border-2 border-[#00509d] py-6 px-4 flex items-center justify-center text-center shadow-[0_15px_30px_-5px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-transform">
+            <h3 class="text-[#00509d] font-bold text-sm md:text-base uppercase leading-snug">
+                Fine Cyclo<br>UA- Series
+            </h3>
+        </div>
+
+    </div>
+</div>
+   <!-- ==========================================
+     SECCIÓN: FAMILIA FINE CYCLO
+     ========================================== -->
+<div class="relative w-full max-w-6xl mx-auto px-6 py-16 font-['Montserrat',_sans-serif]">
+    
+    <!-- PARTE SUPERIOR: Imagen Principal y Botón -->
+    <div class="flex flex-col md:flex-row items-center justify-between mb-16 gap-10">
+        
+        <!-- Imagen de los componentes -->
+        <div class="w-full md:w-2/3 flex justify-center md:justify-start relative z-10">
+            <!-- Sustituye 'imagen-fine-cyclo.png' por el nombre de tu archivo -->
+            <img src="Productos/Motion control/Imagen8_8.png" alt="Componentes Fine Cyclo" class="w-full max-w-2xl object-contain drop-shadow-2xl">
+        </div>
+
+        <!-- Botón Cotizar -->
+        <div class="w-full md:w-1/3 flex justify-center md:justify-end relative z-10">
+            <a href="Contacto.html" class="bg-[#ffc107] hover:bg-[#ffb300] text-black font-bold text-lg md:text-xl uppercase px-10 py-3 rounded-full shadow-xl hover:scale-105 transition-transform text-center tracking-wide">
+                Quiero cotizar
+            </a>
+        </div>
+        
+    </div>
+
+    <!-- PARTE INFERIOR: Cuadrícula de 8 Cajas -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 relative z-10">
+        
+        <!-- Caja 1 -->
+        <div class="bg-white border-2 border-[#00509d] py-6 px-4 flex items-center justify-center text-center shadow-[0_15px_30px_-5px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-transform">
+            <h3 class="text-[#00509d] font-bold text-sm md:text-base uppercase leading-snug">
+                IB PRECISION<br>TIPO P1
+            </h3>
+        </div>
+
+        <!-- Caja 2 -->
+        <div class="bg-white border-2 border-[#00509d] py-6 px-4 flex items-center justify-center text-center shadow-[0_15px_30px_-5px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-transform">
+            <h3 class="text-[#00509d] font-bold text-sm md:text-base uppercase leading-snug">
+                IB PRECISION<br>TIPO P2
+            </h3>
+        </div>
+
+        <!-- Caja 3 -->
+        <div class="bg-white border-2 border-[#00509d] py-6 px-4 flex items-center justify-center text-center shadow-[0_15px_30px_-5px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-transform">
+            <h3 class="text-[#00509d] font-bold text-sm md:text-base uppercase leading-snug">
+                IB PRECISION<br>TIPO PK1
+            </h3>
+        </div>
+
+        <!-- Caja 4 -->
+        <div class="bg-white border-2 border-[#00509d] py-6 px-4 flex items-center justify-center text-center shadow-[0_15px_30px_-5px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-transform">
+            <h3 class="text-[#00509d] font-bold text-sm md:text-base uppercase leading-snug">
+                CYCLO<br>(Para servomotores)
+            </h3>
+        </div>
+
+    </div>
+</div>
+   
+   
+   <!-- ==========================================
+     SECCIÓN: TRANSICIÓN (IMAGEN PLANTA) 
+     ========================================== -->
+<div class="relative w-full h-48 md:h-72 overflow-hidden">
+    <!-- Etiqueta de Video Nativo -->
+        <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2"
+        >
+            <!-- AQUÍ PONES EL NOMBRE DE TU VIDEO DESCARGADO -->
+            <source src="Productos/Motion control/motion-control.mp4" type="video/mp4">
+        </video>
+            <!-- Gradiente que oscurece la foto hacia abajo para fundirse con la siguiente sección -->
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1a1a1a]"></div>
+</div>
+
+   <!-- ==========================================
+     SECCIÓN: LÍNEA COMPLETA (FONDO OSCURO) 
+     ========================================== -->
+<section class="bg-[#1a1a1a] text-white py-12 px-6 font-['Montserrat',_sans-serif]">
+    <div class="max-w-6xl mx-auto text-center">
+        
+        <h2 class="text-2xl md:text-3xl font-bold mb-10 tracking-wide">
+            LÍNEA COMPLETA
+        </h2>
+        <!-- Fila 1 de enlaces -->
+        <div class="flex flex-wrap justify-center items-center gap-y-6 text-[10px] md:text-sm font-medium">
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">AC MOTORS </span>
+            <span class="border-l border-white/50 h-5"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">BRAKE MOTORS</span>
+            <span class="border-l border-white/50 h-5"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">MOTOR-DRIVE<BR> PACKAGES, HPC-HP</span>
+            <span class="border-l border-white/50 h-5 hidden md:block"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors mt-2 md:mt-0">TORQUE MOTORS</span>
+            <span class="border-l border-white/50 h-5 mt-2 md:mt-0"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors text-center leading-tight mt-2 md:mt-0">SYNCHRONUS<br>PM MOTORS IE4</span>
+        </div>
+
+        <!-- Fila 2 de enlaces -->
+        <div class="flex flex-wrap justify-center items-center gap-y-6 text-[10px] md:text-sm font-medium mt-6 md:mt-8">
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors text-center leading-tight">BRUSHLESS<br>SERVO MOTORS</span>
+            <span class="border-l border-white/50 h-5"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">POWER ELECTRONICS </span>
+        </div>
+    </div>
+</section>   
+
+<footer id="contacto" class="relative bg-[#0a192f] font-['Montserrat',_sans-serif] flex overflow-hidden">
+    
+
+    <img 
+        src="Fondo-azul.jpg" 
+        alt="Fondo Lámina Verde" 
+        class="absolute inset-0 w-full h-full object-cover z-0 mix-blend-overlay opacity-80"
+    >
+
+    <!-- Contenedor Flex Principal (Alineado al fondo) -->
+    <div class="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-end justify-between">
+        
+        <!-- LADO IZQUIERDO (Íconos en línea + Línea Blanca + Texto Inferior) -->
+        <div class="w-full md:flex-1 flex flex-col pt-10 pb-3 pl-4 pr-6 md:pl-8 md:pr-10">
+            
+            <!-- Contenedor de los 4 Íconos en Línea -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-white text-center items-end mb-5">
+                
+                <!-- 1. Horario -->
+                <div class="flex flex-col items-center justify-end h-full">
+                    <img src="tiempo.png" alt="Horario" class="h-10 md:h-12 object-contain mb-2">
+                    <h4 class="font-bold text-xs md:text-sm mb-1">Horario de Atención</h4>
+                    <p class="text-[10px] md:text-xs leading-tight">Lun - Vie | 09:30 a 18:30 HRS<br>Sab | 9:30 a 15:30 HRS</p>
+                </div>
+
+                <!-- 2. Ubicación  -->
+                <a href="https://maps.app.goo.gl/EZtrTciufw9fJPoB9" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform cursor-pointer relative z-20">
+                <img src="ubicacion.png" alt="Ubicación" class="h-10 md:h-12 object-contain mb-2">
+                 <p class="text-xs md:text-sm">Oriente 10 #718, Orizaba</p>
+                    </a>
+                <!-- 3. Teléfono / WhatsApp -->
+                <a href="https://wa.me/522721498040" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform">
+                    <img src="telefono.png" alt="Teléfono" class="h-10 md:h-12 object-contain mb-2">
+                    <p class="text-xs md:text-sm">(272) 149 8040</p>
+                </a>
+
+                <!-- 4. Sitio Web -->
+                <a href="https://www.fph.com.mx" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform">
+                    <img src="Sitio web.png" alt="Sitio Web" class="h-10 md:h-12 object-contain mb-2">
+                    <p class="text-xs md:text-sm">www.fph.com.mx</p>
+                </a>
+            </div>
+
+            <!-- Línea Blanca Gruesa -->
+            <div class="w-full h-1 md:h-1.5 bg-white mb-2"></div>
+
+            <!-- Texto Inferior (Letras Chiquitas) -->
+            <p class="text-white text-xs md:text-sm font-bold tracking-wide">
+                FRIO POTENCIA Y HERRAMIENTAS S.A. DE C.V.
+            </p>
+        </div>
+
+        <div class="w-40 md:w-56 shrink-0 flex items-end justify-center">
+            <a href="#inicio" title="Volver al Inicio">
+                <img 
+                    src="fph-logo-rojo.png" 
+                    alt="Logo FPH Rojo" 
+                    class="w-full h-auto object-cover drop-shadow-2xl hover:brightness-110 transition-all"
+                >
+            </a>
+        </div>
+        
+    </div>
+</footer>

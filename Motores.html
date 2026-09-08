@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPH - Soluciones para Aceite de Palma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<nav class="absolute top-0 left-0 w-full z-50 font-['Montserrat',_sans-serif]">
+    <div class="max-w-7xl mx-auto px-6 py-5 md:py-6 flex justify-between items-center">
+        
+        <!-- LADO IZQUIERDO: Logo -->
+        <div class="flex items-center">
+            <!-- Tip: Como el fondo ahra es oscuro, te recomiendo usar una versión en blanco/clara de tu logo. -->
+            <img src="fph-logo-blanco.png" alt="Logo FPH" class="h-24 md:h-24 object-contain brightness-0 invert md:brightness-100 md:invert-0">
+        </div>
+         <!-- CENTRO: Enlaces de Navegación (Centrados y en Blanco) -->
+        <div class="hidden md:flex flex-1 justify-center items-center gap-10 text-white text-sm md:text-base font-semibold tracking-wide">
+            <a href="Index.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                INICIO
+            </a>
+            <a href="Nosotros.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                NOSOTROS
+            </a>
+            <a href="Productos.html" class="flex items-center gap-1.5 hover:text-gray-300 transition-colors group drop-shadow-md">
+                PRODUCTOS<i class="fas fa-chevron-down text-[10px] opacity-70 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+            <a href="Servicios.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                SERVICIOS
+            </a>
+            <a href="Contacto.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                CONTACTO
+            </a>
+        </div>
+
+        <!-- LADO DERECHO: Menú Móvil (Solo visible en celulares) -->
+        <div class="md:hidden flex items-center">
+            <button class="text-white text-3xl focus:outline-none drop-shadow-md">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+    </div>
+</nav>
+   <!-- SECCIÓN PRINCIPAL (HERO) CON VIDEO LOCAL Y CORTE EN "V" -->
+<section id="inicio" class="relative font-['Montserrat',_sans-serif] flex flex-col w-full h-[80vh] md:h-[98vh] overflow-hidden" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 95%, 0 100%);">
+                <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
+                            <div class="slider-track h-full">
+    <img src="Productos/Motores/Motores1.png" alt="Fábrica de Motores" class="w-full h-full object-cover">
+            </div>
+                </div>
+    
+    <!-- Filtro oscuro reforzado para que las letras blancas resalten perfecto sobre el video -->
+    <div class="absolute inset-0 bg-[#0a192f]/60 z-10"></div>
+
+    <!-- Contenido Centrado (Títulos) -->
+    <div class="relative z-20 w-full h-full max-w-5xl mx-auto px-6 flex flex-col items-center justify-center text-center pt-10">
+        
+        <!-- Título Principal -->
+        <h1 class="text-white text-4xl md:text-6xl font-bold uppercase leading-tight drop-shadow-xl tracking-wide mb-4">
+            MOTORES
+        </h1>
+    </div>
+   
+</section>
+    <!-- ==========================================
+     SECCIÓN: MOTORES (INDUCCIÓN Y SÍNCRONOS)
+     ========================================== -->
+<section class="relative bg-white py-16 px-6 font-['Montserrat',_sans-serif] overflow-hidden">
+    
+    <!-- Opcional: Fondo de hexágonos muy tenue -->
+    <!-- <img src="fondo-hexagonos.png" class="absolute inset-0 w-full h-full object-cover opacity-10 z-0 pointer-events-none"> -->
+
+    <div class="max-w-6xl mx-auto relative z-10">
+        
+        <!-- PARTE SUPERIOR: Imagen y Botón -->
+        <div class="flex flex-col md:flex-row items-center justify-between mb-16 gap-10">
+            
+            <!-- Imagen de los Motores -->
+            <div class="w-full md:w-2/3 flex justify-center md:justify-start relative z-10">
+                <!-- Sustituye 'motores.png' por el nombre real de tu archivo -->
+                <img src="Productos/Motores/motor_1.png" alt="Motores Sumitomo" class="w-full max-w-2xl object-contain drop-shadow-2xl">
+            </div>
+
+            <!-- Botón Cotizar -->
+            <div class="w-full md:w-1/3 flex justify-center md:justify-end relative z-10">
+                <a href="Contacto.html" class="bg-[#ffc107] hover:bg-[#ffb300] text-black font-bold text-lg md:text-xl uppercase px-10 py-3 rounded-full shadow-xl hover:scale-105 transition-transform text-center leading-tight">
+                    Quiero cotizar<br>ahora
+                </a>
+            </div>
+            
+        </div>
+
+        <!-- PARTE INFERIOR: Tarjetas de Información -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+            
+            <!-- Tarjeta 1: Motores de Inducción -->
+            <div class="bg-white border-2 border-[#00509d] p-8 md:p-12 shadow-[0_15px_30px_-5px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-transform flex flex-col h-full">
+                
+                <h2 class="text-[#00509d] font-bold text-2xl md:text-3xl text-center uppercase mb-4 leading-tight">
+                    Motores de<br>Inducción
+                </h2>
+                
+                <p class="text-center text-gray-800 font-medium mb-8">
+                    ¿Por qué elegir motores de inducción<br>Sumitomo?
+                </p>
+                
+                <!-- Lista con viñetas de puntos normales -->
+                <ul class="list-disc pl-5 space-y-4 text-sm md:text-base text-gray-800 font-medium">
+                    <li>
+                        <strong>Rendimiento rentable:</strong> alto rendimiento sin un precio elevado.
+                    </li>
+                    <li>
+                        <strong>Diseño más simple:</strong> menos componentes significan menos mantenimiento y tiempo de inactividad.
+                    </li>
+                    <li>
+                        <strong>Construcción duradera:</strong> soporta entornos difíciles como calor, polvo y largas horas de funcionamiento.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tarjeta 2: Motores Síncronos -->
+            <div class="bg-white border-2 border-[#00509d] p-8 md:p-12 shadow-[0_15px_30px_-5px_rgba(0,0,0,0.1)] hover:-translate-y-1 transition-transform flex flex-col h-full">
+                
+                <h2 class="text-[#00509d] font-bold text-2xl md:text-3xl text-center uppercase mb-4 leading-tight">
+                    Motores<br>Síncronos
+                </h2>
+                
+                <p class="text-center text-gray-800 font-medium mb-8">
+                    ¿Por qué elegir motores síncronos<br>Sumitomo?
+                </p>
+                
+                <!-- Lista con viñetas de puntos normales -->
+                <ul class="list-disc pl-5 space-y-4 text-sm md:text-base text-gray-800 font-medium">
+                    <li>
+                        <strong>Eficiencia inigualable:</strong> reduzca el consumo de energía sin sacrificar el rendimiento.
+                    </li>
+                    <li>
+                        <strong>Control de velocidad preciso:</strong> ideal para aplicaciones donde la velocidad constante es fundamental.
+                    </li>
+                    <li>
+                        <strong>Funcionamiento silencioso:</strong> Diseñados para minimizar el ruido, lo que los hace perfectos para entornos sensibles.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+|      <!-- ==========================================
+     SECCIÓN: TRANSICIÓN (IMAGEN PLANTA) 
+     ========================================== -->
+<div class="relative w-full h-48 md:h-72 overflow-hidden">
+    <!-- Etiqueta de Video Nativo -->
+        <video 
+            autoplay 
+            loop 
+            muted 
+            playsinline 
+            class="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2"
+        >
+            <!-- AQUÍ PONES EL NOMBRE DE TU VIDEO DESCARGADO -->
+            <source src="Productos/Motores/motores.mp4" type="video/mp4">
+        </video>
+
+</div>
+<!-- ==========================================
+     SECCIÓN: LÍNEA COMPLETA (FONDO OSCURO) 
+     ========================================== -->
+<section class="bg-[#1a1a1a] text-white py-12 px-6 font-['Montserrat',_sans-serif]">
+    <div class="max-w-6xl mx-auto text-center">
+        
+        <h2 class="text-2xl md:text-3xl font-bold mb-10 tracking-wide">
+            LÍNEA COMPLETA
+        </h2>
+        
+        <!-- Fila 1 de enlaces -->
+        <div class="flex flex-wrap justify-center items-center gap-y-6 text-[10px] md:text-sm font-medium">
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">COMPOWER</span>
+            <span class="border-l border-white/50 h-5"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">HANSEN M4 ACC</span>
+            <span class="border-l border-white/50 h-5"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">HANSEN P4</span>
+            <span class="border-l border-white/50 h-5 hidden md:block"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors mt-2 md:mt-0">HANSEN MSCT</span>
+            <span class="border-l border-white/50 h-5 mt-2 md:mt-0"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors text-center leading-tight mt-2 md:mt-0">HIGH-SPEED<br>GEAR UNITS</span>
+        </div>
+
+        <!-- Fila 2 de enlaces -->
+        <div class="flex flex-wrap justify-center items-center gap-y-6 text-[10px] md:text-sm font-medium mt-6 md:mt-8">
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors text-center leading-tight">INDUSTRIAL<br>REDUCERS</span>
+            <span class="border-l border-white/50 h-5"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">MILL DRIVE</span>
+            <span class="border-l border-white/50 h-5"></span>
+            
+            <span class="px-3 md:px-6 hover:text-[#ffc107] cursor-pointer transition-colors">PARAMAX</span>
+        </div>
+    </div>
+</section>   
+
+<footer id="contacto" class="relative bg-[#0a192f] font-['Montserrat',_sans-serif] flex overflow-hidden">
+    
+
+    <img 
+        src="Fondo-azul.jpg" 
+        alt="Fondo Lámina Verde" 
+        class="absolute inset-0 w-full h-full object-cover z-0 mix-blend-overlay opacity-80"
+    >
+
+    <!-- Contenedor Flex Principal (Alineado al fondo) -->
+    <div class="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-end justify-between">
+        
+        <!-- LADO IZQUIERDO (Íconos en línea + Línea Blanca + Texto Inferior) -->
+        <div class="w-full md:flex-1 flex flex-col pt-10 pb-3 pl-4 pr-6 md:pl-8 md:pr-10">
+            
+            <!-- Contenedor de los 4 Íconos en Línea -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-white text-center items-end mb-5">
+                
+                <!-- 1. Horario -->
+                <div class="flex flex-col items-center justify-end h-full">
+                    <img src="tiempo.png" alt="Horario" class="h-10 md:h-12 object-contain mb-2">
+                    <h4 class="font-bold text-xs md:text-sm mb-1">Horario de Atención</h4>
+                    <p class="text-[10px] md:text-xs leading-tight">Lun - Vie | 09:30 a 18:30 HRS<br>Sab | 9:30 a 15:30 HRS</p>
+                </div>
+
+                <!-- 2. Ubicación  -->
+                <a href="https://maps.app.goo.gl/EZtrTciufw9fJPoB9" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform cursor-pointer relative z-20">
+                <img src="ubicacion.png" alt="Ubicación" class="h-10 md:h-12 object-contain mb-2">
+                 <p class="text-xs md:text-sm">Oriente 10 #718, Orizaba</p>
+                    </a>
+                <!-- 3. Teléfono / WhatsApp -->
+                <a href="https://wa.me/522721498040" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform">
+                    <img src="telefono.png" alt="Teléfono" class="h-10 md:h-12 object-contain mb-2">
+                    <p class="text-xs md:text-sm">(272) 149 8040</p>
+                </a>
+
+                <!-- 4. Sitio Web -->
+                <a href="https://www.fph.com.mx" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform">
+                    <img src="Sitio web.png" alt="Sitio Web" class="h-10 md:h-12 object-contain mb-2">
+                    <p class="text-xs md:text-sm">www.fph.com.mx</p>
+                </a>
+            </div>
+
+            <!-- Línea Blanca Gruesa -->
+            <div class="w-full h-1 md:h-1.5 bg-white mb-2"></div>
+
+            <!-- Texto Inferior (Letras Chiquitas) -->
+            <p class="text-white text-xs md:text-sm font-bold tracking-wide">
+                FRIO POTENCIA Y HERRAMIENTAS S.A. DE C.V.
+            </p>
+        </div>
+
+        <div class="w-40 md:w-56 shrink-0 flex items-end justify-center">
+            <a href="#inicio" title="Volver al Inicio">
+                <img 
+                    src="fph-logo-rojo.png" 
+                    alt="Logo FPH Rojo" 
+                    class="w-full h-auto object-cover drop-shadow-2xl hover:brightness-110 transition-all"
+                >
+            </a>
+        </div>
+        
+    </div>
+</footer>

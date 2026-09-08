@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPH - Soluciones para Aceite de Palma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+<nav class="absolute top-0 left-0 w-full z-50 font-['Montserrat',_sans-serif]">
+    <div class="max-w-7xl mx-auto px-6 py-5 md:py-6 flex justify-between items-center">
+        
+        <!-- LADO IZQUIERDO: Logo -->
+        <div class="flex items-center">
+            <!-- Si tu logo actual es oscuro, puedes agregar temporalmente las clases "brightness-0 invert" para forzarlo a verse blanco -->
+            <img src="fph-logo-blanco.png" alt="Logo FPH" class="h-24 md:h-24 object-contain brightness-0 invert md:brightness-100 md:invert-0">
+        </div>
+
+         <!-- CENTRO: Enlaces de Navegación (Centrados y en Blanco) -->
+        <div class="hidden md:flex flex-1 justify-center items-center gap-10 text-white text-sm md:text-base font-semibold tracking-wide">
+            <a href="Index.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                INICIO
+            </a>
+            <a href="Nosotros.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                NOSOTROS
+            </a>
+            <a href="Productos.html" class="flex items-center gap-1.5 hover:text-gray-300 transition-colors group drop-shadow-md">
+                PRODUCTOS<i class="fas fa-chevron-down text-[10px] opacity-70 group-hover:opacity-100 transition-opacity"></i>
+            </a>
+            <a href="Servicios.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                SERVICIOS
+            </a>
+            <a href="Contacto.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
+                CONTACTO
+            </a>
+        </div>
+
+        <!-- LADO DERECHO: Menú Móvil (Solo visible en celulares) -->
+        <div class="md:hidden flex items-center">
+            <button class="text-white text-3xl focus:outline-none drop-shadow-md">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+    </div>
+</nav>
+   
+<!-- SECCIÓN PRINCIPAL (HERO) CON CORTE EN "V" Y TEXTO A LA IZQUIERDA -->
+<section id="inicio" class="relative font-['Montserrat',_sans-serif] flex flex-col w-full h-[88vh] overflow-hidden" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 95%, 0 100%);">
+
+    <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
+        <div class="slider-track h-full">
+            <img src="Servicios/13.webp" alt="Fondo Nosotros" class="h-full w-full object-cover">
+        </div>
+    </div>
+    
+    <!-- Filtro oscuro para resaltar las letras -->
+    <div class="absolute inset-0 bg-[#0a192f]/60 z-10"></div>
+   
+    <!-- Contenido Centrado (Títulos) -->
+    <div class="relative z-20 w-full h-full max-w-5xl mx-auto px-6 flex flex-col items-center justify-center text-center pt-10">
+        
+        <!-- Título Principal -->
+        <h1 class="text-white text-4xl md:text-6xl font-bold uppercase leading-tight drop-shadow-xl tracking-wide mb-4">
+            Servicios
+        </h1>
+    </div>
+</section>
+
+<section id="servicios" class="relative bg-[#f8f9fa] py-24 px-6 font-['Montserrat',_sans-serif]">
+    <div class="max-w-7xl mx-auto">
+        
+        <!-- Textos de Introducción -->
+        <div class="text-center max-w-3xl mx-auto mb-20">
+            <h2 class="text-3xl md:text-5xl font-bold text-[#004b93] uppercase tracking-wide mb-6">
+                
+            </h2>
+            <p class="text-gray-600 text-base md:text-lg font-medium leading-relaxed">
+                Contamos con una red de soporte en toda Latinoamérica que garantiza atención rápida y eficiente.
+            </p>
+        </div>
+
+        <!-- items-stretch asegura que todas las tarjetas midan lo mismo de alto -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-8 items-stretch">
+            
+            <!-- TARJETA 1: SERVICIOS (Fondo Claro) -->
+            <div class="relative bg-[#dfe5eb] rounded-[2.5rem] p-8 md:p-10 shadow-2xl flex flex-col hover:-translate-y-2 transition-transform duration-300">
+                
+                <!-- Número de Fondo -->
+                <span class="absolute top-6 right-8 text-6xl md:text-7xl font-extrabold text-blanck-150 col pointer-events-none select-none">01.</span>
+                
+              <div class="relative z-10 mb-6 mt-4 h-14 flex items-center">
+              <img src="Servicios/llave-inglesa.png" alt="Ícono de Herramientas" class="w-14 md:w-18 h-auto object-contain">
+                </div>
+                
+                <!-- Título -->
+                <h3 class="relative z-10 text-2xl font-bold text-[#004b93] mb-6 uppercase tracking-wide">Servicios</h3>
+                
+                <!-- Lista de viñetas (Iconos de  FontAwesome) -->
+                <ul class="relative z-10 space-y-4 text-gray-700 font-medium text-sm md:text-base mb-12">
+                    <li class="flex items-start"><i class="fas fa-check text-[#4ade80] mt-1 mr-3 shrink-0"></i>Selección e ingeniería de equipos</li>
+                    <li class="flex items-start"><i class="fas fa-check text-[#4ade80] mt-1 mr-3 shrink-0"></i>Soporte en arranque y puesta en marcha</li>
+                    <li class="flex items-start"><i class="fas fa-check text-[#4ade80] mt-1 mr-3 shrink-0"></i>Capacitación técnica</li>
+                    <li class="flex items-start"><i class="fas fa-check text-[#4ade80] mt-1 mr-3 shrink-0"></i>Servicio en campo</li>
+                    <li class="flex items-start"><i class="fas fa-check text-[#4ade80] mt-1 mr-3 shrink-0"></i>Reparación en planta o sitio</li>
+                    <li class="flex items-start"><i class="fas fa-check text-[#4ade80] mt-1 mr-3 shrink-0"></i>Mantenimiento preventivo y correctivo</li>
+                </ul>
+            </div>
+
+            <!-- TARJETA 2: INFRAESTRUCTURA (Fondo Oscuro - Resaltada) -->
+            <div class="relative bg-[#0f172a] rounded-[2.5rem] p-8 md:p-10 shadow-2xl flex flex-col hover:-translate-y-2 transition-transform duration-300 lg:-translate-y-4">
+                
+                <!-- Número de Fondo -->
+                <span class="absolute top-6 right-8 text-6xl md:text-7xl font-extrabold text-white pointer-events-none select-none">02.</span>
+                
+                    <div class="relative z-10 mb-6 mt-2 h-12 flex items-center">
+              <img src="Servicios/industrial.png" alt="Ícono de Herramientas" class="w-14 md:w-18 h-auto object-contain">
+                </div>
+                
+                <!-- Título -->
+                <h3 class="relative z-10 text-2xl font-bold text-white mb-6 uppercase tracking-wide">Infraestructura</h3>
+                
+                <!-- Lista -->
+                <ul class="relative z-10 space-y-4 text-gray-300 font-medium text-sm md:text-base mb-12">
+                    <li class="flex items-start"><i class="fas fa-check text-[#4ade80] mt-1 mr-3 shrink-0"></i>Plantas de ensamble especializadas</li>
+                    <li class="flex items-start"><i class="fas fa-check text-[#4ade80] mt-1 mr-3 shrink-0"></i>Centros de servicio técnico</li>
+                    <li class="flex items-start"><i class="fas fa-check text-[#4ade80] mt-1 mr-3 shrink-0"></i>Fabricación en Brasil con estándares globales</li>
+                </ul>
+            </div>
+
+            <!-- TARJETA 3: TIEMPOS DE ENTREGA (Fondo Claro) -->
+            <div class="relative bg-[#dfe5eb] rounded-[2.5rem] p-8 md:p-10 shadow-lg flex flex-col hover:-translate-y-2 transition-transform duration-300">
+                
+                <!-- Número de Fondo -->
+                <span class="absolute top-6 right-8 text-6xl md:text-7xl font-extrabold text-black pointer-events-none select-none">03.</span>
+                
+                   <div class="relative z-10 mb-6 mt-2 h-12 flex items-center">
+              <img src="Servicios/entrega-rapida (1).png" alt="Ícono de Herramientas" class="w-16 md:w-18 h-auto object-contain">
+                </div>
+                
+                <!-- Título -->
+                <h3 class="relative z-10 text-2xl font-bold text-[#004b93] mb-6 uppercase tracking-wide">Entregas</h3>
+                
+                <!-- Lista -->
+                <ul class="relative z-10 space-y-4 text-gray-700 font-medium text-sm md:text-base mb-12">
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-[#4ade80] mt-1 mr-3 shrink-0"></i>
+                        <span><strong class="text-[#004b93]">Equipos estándar:</strong><br> Desde 1 semana</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check text-[#4ade80] mt-1 mr-3 shrink-0"></i>
+                        <span><strong class="text-[#004b93]">Equipos especiales:</strong><br> 2 a 3 semanas</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+<footer id="contacto" class="relative bg-[#0a192f] font-['Montserrat',_sans-serif] flex overflow-hidden">
+    <img 
+        src="Fondo-azul.jpg" 
+        alt="Fondo Lámina Verde" 
+        class="absolute inset-0 w-full h-full object-cover z-0 mix-blend-overlay opacity-80"
+    >
+
+    <!-- Contenedor Flex Principal (Alineado al fondo) -->
+    <div class="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-end justify-between">
+        
+        <!-- LADO IZQUIERDO (Íconos en línea + Línea Blanca + Texto Inferior) -->
+        <div class="w-full md:flex-1 flex flex-col pt-10 pb-3 pl-4 pr-6 md:pl-8 md:pr-10">
+            
+            <!-- Contenedor de los 4 Íconos en Línea -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-white text-center items-end mb-5">
+                
+                <!-- 1. Horario -->
+                <div class="flex flex-col items-center justify-end h-full">
+                    <img src="tiempo.png" alt="Horario" class="h-10 md:h-12 object-contain mb-2">
+                    <h4 class="font-bold text-xs md:text-sm mb-1">Horario de Atención</h4>
+                    <p class="text-[10px] md:text-xs leading-tight">Lun - Vie | 09:30 a 18:30 HRS<br>Sab | 9:30 a 15:30 HRS</p>
+                </div>
+
+                <!-- 2. Ubicación  -->
+                <a href="https://maps.app.goo.gl/EZtrTciufw9fJPoB9" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform cursor-pointer relative z-20">
+                <img src="ubicacion.png" alt="Ubicación" class="h-10 md:h-12 object-contain mb-2">
+                 <p class="text-xs md:text-sm">Oriente 10 #718, Orizaba</p>
+                    </a>
+                <!-- 3. Teléfono / WhatsApp -->
+                <a href="https://wa.me/522721498040" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform">
+                    <img src="telefono.png" alt="Teléfono" class="h-10 md:h-12 object-contain mb-2">
+                    <p class="text-xs md:text-sm">(272) 149 8040</p>
+                </a>
+
+                <!-- 4. Sitio Web -->
+                <a href="https://www.fph.com.mx" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform">
+                    <img src="Sitio web.png" alt="Sitio Web" class="h-10 md:h-12 object-contain mb-2">
+                    <p class="text-xs md:text-sm">www.fph.com.mx</p>
+                </a>
+            </div>
+
+            <!-- Línea Blanca Gruesa -->
+            <div class="w-full h-1 md:h-1.5 bg-white mb-2"></div>
+
+            <!-- Texto Inferior (Letras Chiquitas) -->
+            <p class="text-white text-xs md:text-sm font-bold tracking-wide">
+                FRIO POTENCIA Y HERRAMIENTAS S.A. DE C.V.
+            </p>
+        </div>
+
+        <div class="w-40 md:w-56 shrink-0 flex items-end justify-center">
+            <a href="#inicio" title="Volver al Inicio">
+                <img 
+                    src="fph-logo-rojo.png" 
+                    alt="Logo FPH Rojo" 
+                    class="w-full h-auto object-cover drop-shadow-2xl hover:brightness-110 transition-all"
+                >
+            </a>
+        </div>
+        
+    </div>
+</footer>
