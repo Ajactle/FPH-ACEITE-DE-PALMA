@@ -3,285 +3,541 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FPH - Soluciones para Aceite de Palma</title>
+    
+    <!-- ==========================================
+         ETIQUETAS META (SEO Y REDES SOCIALES)
+         ========================================== -->
+    <title>FPH - Soluciones Integrales para la Industria | Aceite de Palma</title>
+    <meta name="description" content="Frio Potencia y Herramientas (FPH) ofrece soluciones MRO, transmisión de potencia, automatización y herramientas de alta calidad para la industria.">
+    <meta name="keywords" content="FPH, Frio Potencia y Herramientas, MRO, transmisión de potencia, aceite de palma, automatización, herramientas industriales, rodamientos, reductores">
+    <meta name="author" content="FPH S.A. de C.V.">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph (Para cuando compartan tu link en WhatsApp, Facebook, etc.) -->
+    <meta property="og:title" content="FPH - Soluciones Integrales Industriales">
+    <meta property="og:description" content="Calidad, rapidez y experiencia para cubrir todas tus necesidades industriales. Suministros MRO y Transmisión de Potencia.">
+    <!-- Cambia fph-logo-color.png por la URL completa de tu imagen en el servidor cuando lo subas -->
+    <meta property="og:image" content="fph-logo-color.png">
+    <meta property="og:type" content="website">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
+    <!-- ESTILOS PARA EL CARRUSEL DE MARCAS (3 LÍNEAS) -->
     <style>
-        body {
-            font-family: 'Times New Roman', Times, serif;
+        @keyframes scroll-left {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
-</style>
-<!-- ENCABEZADO / NAVBAR TRANSPARENTE (Estilo Imagen 2) -->
-<nav class="absolute top-0 left-0 w-full z-50 font-['Montserrat',_sans-serif]">
-    <div class="max-w-7xl mx-auto px-6 py-5 md:py-6 flex justify-between items-center">
+        @keyframes scroll-right {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
         
-        <!-- LADO IZQUIERDO: Logo -->
-        <div class="flex items-center">
-            <!-- Si tu logo actual es oscuro, puedes agregar temporalmente las clases "brightness-0 invert" para forzarlo a verse blanco -->
-            <img src="fph-logo-blanco.png" alt="Logo FPH" class="h-24 md:h-24 object-contain brightness-0 invert md:brightness-100 md:invert-0">
-        </div>
+        .animate-scrolling-logos {
+            display: flex;
+            width: max-content;
+            /* Reducimos los segundos para que vaya MÁS RÁPIDO (Antes era 30s) */
+            animation: scroll-left 20s linear infinite;
+        }
+        
+        .animate-scrolling-logos-reverse {
+            display: flex;
+            width: max-content;
+            /* La segunda línea va hacia el otro lado y un poco más lento */
+            animation: scroll-right 25s linear infinite;
+        }
 
-        <!-- CENTRO: Enlaces de Navegación (Centrados y en Blanco) -->
-        <div class="hidden md:flex flex-1 justify-center items-center gap-10 text-white text-sm md:text-base font-semibold tracking-wide">
-            <a href="index.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
-                INICIO
-            </a>
-            <a href="Nosotros.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
-                NOSOTROS 
-            </a>
-               <!-- ENLACE DE PRODUCTOS CON DROPDOWN (Estilo Burbuja Gris) -->
+        .animate-scrolling-logos-fast {
+            display: flex;
+            width: max-content;
+            /* La tercera línea va hacia la izquierda pero muy rápido */
+            animation: scroll-left 15s linear infinite;
+        }
+
+        /* Pausa al poner el mouse */
+        .marquee-container:hover .animate-scrolling-logos,
+        .marquee-container:hover .animate-scrolling-logos-reverse,
+        .marquee-container:hover .animate-scrolling-logos-fast {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="bg-white">
+
+    <!-- ==========================================
+         ENCABEZADO / NAVBAR TRANSPARENTE
+         ========================================== -->
+    <nav class="absolute top-0 left-0 w-full z-50 font-['Montserrat',_sans-serif]">
+        <div class="max-w-7xl mx-auto px-6 py-4 md:py-6 flex justify-between items-center relative">
+            
+            <!-- LOGO -->
+            <div class="flex items-center">
+                <a href="#inicio">
+                    <img src="Inicio/fph-logo-blanco.png" alt="Logo FPH" class="h-16 md:h-24 object-contain brightness-0 invert md:brightness-100 md:invert-0">
+                </a>
+            </div>
+            
+            <!-- CENTRO: Enlaces de Navegación (Desktop) -->
+            <div class="hidden md:flex flex-1 justify-center items-center gap-10 text-white text-sm md:text-base font-semibold tracking-wide">
+                <a href="#inicio" class="hover:text-[#25d366] transition-colors drop-shadow-md">INICIO</a>
+                <a href="#nosotros" class="hover:text-[#25d366] transition-colors drop-shadow-md no-underline">NOSOTROS</a>
+                
                 <div class="relative group h-full flex items-center">
-                    
-                    <a href="Productos.html" class="flex items-center gap-1.5 hover:text-gray-300 transition-colors drop-shadow-md py-4 cursor-pointer">
+                    <a href="Potencia.html" class="flex items-center gap-1.5 hover:text-[#25d366] transition-colors drop-shadow-md py-4 cursor-pointer">
                         PRODUCTOS <i class="fas fa-chevron-down text-[10px] opacity-70 group-hover:opacity-100 transition-opacity"></i>
                     </a>
+                </div>
+                
+                <a href="#mro" class="hover:text-[#25d366] transition-colors drop-shadow-md">MRO</a>
+                <a href="#contacto" class="hover:text-[#25d366] transition-colors drop-shadow-md">CONTACTO</a>
+            </div>
+
+            <!-- LADO DERECHO: Botón Menú Móvil -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-white text-3xl focus:outline-none drop-shadow-md">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MENU MÓVIL DESPLEGABLE (Oculto por defecto) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0a192f] absolute top-full left-0 w-full shadow-lg border-t border-white/10">
+            <div class="flex flex-col text-white text-sm font-semibold tracking-wide p-6 gap-6">
+                <a href="#inicio" class="mobile-link hover:text-[#25d366] transition-colors">INICIO</a>
+                <a href="#nosotros" class="mobile-link hover:text-[#25d366] transition-colors">NOSOTROS</a>
+                <a href="Potencia.html" class="mobile-link hover:text-[#25d366] transition-colors">PRODUCTOS</a>
+                <a href="#mro" class="mobile-link hover:text-[#25d366] transition-colors">MRO</a>
+                <a href="#contacto" class="mobile-link hover:text-[#25d366] transition-colors">CONTACTO</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         SECCIÓN PRINCIPAL (HERO)
+         ========================================== -->
+    <section id="inicio" class="relative font-['Montserrat',_sans-serif] flex flex-col w-full h-[80vh] md:h-[98vh] overflow-hidden" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 95%, 0 100%);">
+        
+        <!-- Fondo de Video -->
+        <div class="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none bg-[#0a192f]">
+            <video autoplay loop muted playsinline class="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2">
+                <source src="Inicio/TP.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <!-- Filtro oscuro -->
+        <div class="absolute inset-0 bg-[#0a192f]/50 z-10"></div>
+                  
+        <!-- Contenedor del Texto -->
+        <div class="relative z-20 w-full h-full max-w-7xl mx-auto px-6 flex flex-col items-start justify-center text-left pt-16 md:pt-20">
+           <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase leading-snug drop-shadow-xl tracking-wide mb-6">
+            Soluciones Integrales <br>
+             <span class="block mt-2 md:mt-4">
+               Para la industria de aceite de palma
+               </span>
+                </h1>
+
+            <p class="text-gray-200 text-sm md:text-lg max-w-2xl mb-10 font-medium drop-shadow-md leading-relaxed">
+                La mejor calidad en transmisión de potencia y suministros industriales, respaldados por expertos para optimizar su producción.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <a href="https://wa.me/522721498040" target="_blank" class="bg-[#087A4A] hover:bg-[#1ebd57] text-white font-bold text-sm md:text-base uppercase px-8 py-4 rounded transition-transform hover:scale-105 flex items-center justify-center gap-3 shadow-lg">
+                    <i class="fab fa-whatsapp text-2xl"></i> Cotiza por WhatsApp
+                </a>
+                <a href="Potencia.html" class="border-2 border-white text-white hover:bg-white hover:text-[#0a192f] font-bold text-sm md:text-base uppercase px-8 py-4 rounded transition-all flex items-center justify-center gap-3 shadow-lg">
+                    Ver Soluciones <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SECCIÓN: NOSOTROS
+         ========================================== -->
+    <section id="nosotros" class="py-20 px-6 bg-gray-50 font-['Montserrat',_sans-serif]">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                
+                <!-- COLUMNA IZQUIERDA -->
+                <div class="w-full lg:w-1/2 flex flex-col justify-center text-left">
+                    <h4 class="text-[#2563eb] font-bold tracking-widest uppercase text-sm mb-3">Conócenos</h4>
+                    <h2 class="text-[#43484d] text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+                        Frio Potencia y Herramientas <span class="text-[#2563eb] block">(FPH)</span>
+                    </h2>
+                    <div class="w-40 h-1.5 bg-[#087A4A] mb-8 rounded-full"></div>
                     
-                    <!-- Contenedor del Dropdown (Aparece al hacer hover) -->
-                    <div class="absolute left-1/2 -translate-x-1/2 top-[100%] pt-2 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300 ease-out z-50">
-                        
-                        <!-- Caja visible del menú (Fondo gris, esquinas redondeadas) -->
-                        <div class="bg-[#e5e7eb] rounded-[24px] shadow-2xl py-3 w-56 flex flex-col text-[#0f172a]">
-
-                            <a href="Reductores.html" class="block px-6 py-2.5 text-sm font-medium hover:text-[#2e7d32] hover:bg-gray-300 transition-colors">
-                                REDUCTORES
-                            </a>
-                            <a href="Variadores.html" class="block px-6 py-2.5 text-sm font-medium hover:text-[#2e7d32] hover:bg-gray-300 transition-colors">
-                                VARIADORES
-                            </a>
-                            <a href="Motores.html" class="block px-6 py-2.5 text-sm font-medium hover:text-[#2e7d32] hover:bg-gray-300 transition-colors">
-                                MOTORES
-                            </a>
-                            <a href="Motion-control.html" class="block px-6 py-2.5 text-sm font-medium hover:text-[#2e7d32] hover:bg-gray-300 transition-colors">
-                                MOTION CONTROL DRIVES 
-                            </a>
-                            <a href="Motorreductores.html" class="block px-6 py-2.5 text-sm font-medium hover:text-[#2e7d32] hover:bg-gray-300 transition-colors">
-                                MOTORREDUCTORES 
-                            </a>
-                            <a href="Acoplamiento.html" class="block px-6 py-2.5 text-sm font-medium hover:text-[#2e7d32] hover:bg-gray-300 transition-colors">
-                                ACOPLAMIENTO 
-                            </a>
-
+                    <p class="text-gray-700 text-base md:text-lg leading-relaxed mb-6 font-medium">
+                        Somos una empresa especializada en soluciones industriales integrales, con experiencia en sectores como la agroindustria y manufactura. Ofrecemos soluciones MRO, integrando productos de alta calidad con soporte técnico, convirtiéndonos en un aliado estratégico para nuestros clientes.
+                    </p>
+                   
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shadow-sm shrink-0">
+                                <img src="Inicio/Marca-verificación.png" alt="Calidad Garantizada" class="w-8 h-8 object-contain">
+                            </div>
+                            <span class="font-bold text-gray-800">Calidad Garantizada</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shadow-sm shrink-0">
+                                <img src="Inicio/Entregas-rapidas.png" alt="Entrega Inmediata" class="w-8 h-8 object-contain">
+                            </div>
+                            <span class="font-bold text-gray-800">Entrega Inmediata</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shadow-sm shrink-0">
+                                <img src="Inicio/soporte.png" alt="Soporte Técnico" class="w-8 h-8 object-contain">
+                            </div>
+                            <span class="font-bold text-gray-800">Soporte Técnico</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shadow-sm shrink-0">
+                                <img src="Inicio/Experiencia-Industrial.png" alt="Experiencia Industrial" class="w-8 h-8 object-contain">
+                            </div>
+                            <span class="font-bold text-gray-800">Experiencia Industrial</span>
                         </div>
                     </div>
                 </div>
-                
-            <a href="Servicios.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
-                SERVICIOS
-            </a>
-            <a href="Contacto.html" class="hover:text-gray-300 transition-colors drop-shadow-md">
-                CONTACTO
-            </a>
-        </div>
 
-        <!-- LADO DERECHO: Menú Móvil (Solo visible en celulares) -->
-        <div class="md:hidden flex items-center">
-            <button class="text-white text-3xl focus:outline-none drop-shadow-md">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-        
-    </div>
-</nav>
-    <!-- SECCIÓN PRINCIPAL (HERO) CON VIDEO LOCAL Y CORTE EN "V" -->
-<section id="inicio" class="relative font-['Montserrat',_sans-serif] flex flex-col w-full h-[80vh] md:h-[98vh] overflow-hidden" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 95%, 0 100%);">
-    
-    <div class="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none bg-[#0a192f]">
-        <video 
-            autoplay 
-            loop 
-            muted 
-            playsinline 
-            class="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2"
-        >
-       <source src="Inicio/video2.mp4" type="video/mp4">
-        </video>
-     </div>
-    
-    <!-- Filtro oscuro reforzado para que las letras blancas resalten perfecto sobre el video -->
-             <div class="absolute inset-0 bg-[#0a192f]/60 z-10"></div>
-              
-               
-       <div class="relative z-20 w-full h-full max-w-6xl mx-auto px-6 flex flex-col items-start justify-center text-left pt-10">
-    
-    <!-- Imagen de Soluciones MRO (Reemplaza el texto) -->
-    <!-- Sustituye 'soluciones-mro.png' por el nombre exacto de tu archivo -->
-    <img src="o (2).png" alt="Soluciones MRO" class="w-full max-w-xs md:max-w-md lg:max-w-xl object-contain drop-shadow-xl mb-6">
-    
-    <!-- Aquí debajo puedes dejar el botón de WhatsApp que ya tenías -->
+                <!-- COLUMNA DERECHA -->
+                <div class="w-full lg:w-1/2 flex flex-col gap-6 mt-12 lg:mt-0">
+                    <div class="bg-gradient-to-b from-gray-100 to-gray-200 rounded-[2rem] p-8 shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden group w-full lg:w-11/12 self-end border border-gray-200">
+                        <div class="absolute -right-10 -top-10 w-32 h-32 bg-blue-100/80 rounded-full group-hover:scale-150 transition-transform duration-700 ease-out"></div>
+                        <h3 class="text-[#004b93] text-2xl font-extrabold mb-4 flex items-center gap-3 uppercase tracking-wide relative z-10">
+                            <img src="Inicio/Misión.png" alt="Misión" class="w-12 h-12 object-contain"> Misión
+                        </h3>
+                        <p class="text-gray-700 text-sm md:text-base leading-relaxed relative z-10 font-medium">
+                            Proveer soluciones industriales de alta calidad en transmisión de potencia y automatización, asegurando la continuidad y eficiencia operativa de nuestros clientes a través de un servicio excepcional y entrega oportuna.
+                        </p>
+                    </div>
 
-</div>
+                    <div class="bg-gradient-to-b from-gray-100 to-gray-200 rounded-[2rem] p-8 shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden group w-full lg:w-11/12 self-end border border-gray-200">
+                        <div class="absolute -right-10 -top-10 w-32 h-32 bg-blue-100/80 rounded-full group-hover:scale-150 transition-transform duration-700 ease-out"></div>                    
+                        <h3 class="text-[#004b93] text-2xl font-extrabold mb-4 flex items-center gap-3 uppercase tracking-wide relative z-10">
+                            <img src="Inicio/Visión.png" alt="Visión" class="w-12 h-12 object-contain"> Visión
+                        </h3>
+                        <p class="text-gray-700 text-sm md:text-base leading-relaxed relative z-10 font-medium">
+                            Ser la empresa líder y el socio estratégico más confiable a nivel nacional en la distribución de equipos industriales, reconocidos por nuestra innovación constante y el compromiso inquebrantable con el éxito de la industria.
+                        </p>
+                    </div>
 
+                    <div class="bg-gradient-to-b from-gray-100 to-gray-200 rounded-[2rem] p-8 shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden group w-full lg:w-11/12 self-end border border-gray-200">
+                        <div class="absolute -right-10 -top-10 w-32 h-32 bg-blue-100/50 rounded-full group-hover:scale-150 transition-transform duration-700 ease-out"></div>
+                        <h3 class="text-[#004b93] text-2xl font-extrabold mb-4 flex items-center gap-3 uppercase tracking-wide relative z-10">
+                            <img src="Inicio/Valores.png" alt="Valores" class="w-12 h-12 object-contain"> Valores
+                        </h3>
+                        <ul class="text-gray-700 text-sm md:text-base leading-relaxed relative z-10 font-bold grid grid-cols-2 gap-y-3 gap-x-2">
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-[#2563eb] text-xs"></i> Excelencia</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-[#2563eb] text-xs"></i> Integridad</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-[#2563eb] text-xs"></i> Compromiso</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-[#2563eb] text-xs"></i> Innovación</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-[#2563eb] text-xs"></i> Trabajo en equipo</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-[#2563eb] text-xs"></i> Enfoque al cliente</li>
+                        </ul>
+                    </div>
                 </div>
-            </section>
-
-                <!-- ==========================================
-     SECCIÓN: SUMITOMO DRIVE TECHNOLOGIES
-     ========================================== -->
-<section class="bg-white py-16 px-6 font-['Montserrat',_sans-serif]">
-    <div class="max-w-5xl mx-auto flex flex-col items-center">
-        
-        <!-- 1. Logo Sumitomo -->
-        <!-- Sustituye 'logo-sumitomo.png' por tu archivo -->
-        <img src="Sumitomo_Drive_Technologiles_logo.svg.png" alt="Sumitomo Drive Technologies" class="w-full max-w-md object-contain mb-8">
-            <!-- 2. Imágenes de Productos (Fila de reductores y variadores) -->
-        <img src="Imagen_fondo.png" alt="Gama de Productos" class="w-full max-w-3xl object-contain mb-12 drop-shadow-md hover:scale-105 transition-transform duration-500">
+            </div>
         </div>
-
-        <!-- 3. Lista de Características (Líneas subrayadas) -->
-        <div class="w-full flex flex-col mb-16">
-            
-            <!-- Línea 1 -->
-            <div class="border-b-2 border-black py-3 text-sm md:text-base lg:text-lg">
-                <span class="text-[#004b93] font-medium">Reductores de velocidad</span> 
-                <span class="text-gray-900">con una amplia gama de relaciones de velocidad</span>
-            </div>
-            
-            <!-- Línea 2 -->
-            <div class="border-b-2 border-black py-3 text-sm md:text-base lg:text-lg">
-                <span class="text-[#004b93] font-medium">Motores eléctricos</span> 
-                <span class="text-gray-900">de eficiencia PREMIUM e Inverter</span>
-            </div>
-            
-            <!-- Línea 3 -->
-            <div class="border-b-2 border-black py-3 text-sm md:text-base lg:text-lg">
-                <span class="text-[#004b93] font-medium">Variadores de velocidad</span> 
-                <span class="text-gray-900">de alto grado de protección y fácil integración</span>
-            </div>
-            
-            <!-- Línea 4 -->
-            <div class="border-b-2 border-black py-3 text-sm md:text-base lg:text-lg">
-                <span class="text-[#004b93] font-medium">Sistema de control</span> 
-                <span class="text-gray-900">amigable y centralizado</span>
-            </div>
-            
-            <!-- Línea 5 -->
-            <div class="border-b-2 border-black py-3 text-sm md:text-base lg:text-lg">
-                <span class="text-[#004b93] font-medium">Monitoreo y control</span> 
-                <span class="text-gray-900">remoto</span>
-            </div>
-            
-        </div>
-
-        <!-- 4. Aplicaciones en la Industria -->
-        <div class="text-center mb-10">
-            <h2 class="text-[#2b50a1] text-xl md:text-2xl font-bold uppercase mb-4 tracking-wide">
-                Aplicaciones en la Industria
-            </h2>
-            <p class="text-gray-800 text-sm md:text-base max-w-3xl mx-auto leading-relaxed">
-                Los Reductores y los Motoreductores Sumitomo están diseñados para cubrir cada etapa del proceso productivo del aceite de palma.
-            </p>
-        </div>
-
-        <!-- 5. Aplicaciones con Experiencia (Cajas de Listas) -->
-        <h2 class="text-[#2b50a1] text-xl md:text-2xl font-bold uppercase mb-8 tracking-wide text-center">
-            Aplicaciones con Experiencia
-        </h2>
-
-        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 mb-16">
-            
-            <!-- Columna Izquierda -->
-            <div class="bg-[#eef2f5] rounded-[2rem] p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow">
-                <ul class="space-y-4 text-sm md:text-base text-gray-800 font-medium">
-                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Cablestantes</li>
-                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Desfrutadores</li>
-                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Volteadores</li>
-                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Elevadores de Cangilones</li>
-                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Transportador Sinfin o Tornillo</li>
-                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Digestores (3,000 a 6,000 litros)</li>
-                </ul>
-            </div>
-
-            <!-- Columna Derecha -->
-            <div class="bg-[#eef2f5] rounded-[2rem] p-8 md:p-10 shadow-sm hover:shadow-md transition-shadow">
-                <ul class="space-y-4 text-sm md:text-base text-gray-800 font-medium">
-                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Prensas de Raquis (P5 a P25)</li>
-                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Prensas de Palmiste</li>
-                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Clarificadores</li>
-                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Quebradores</li>
-                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Despulpadores</li>
-                    <li class="flex items-center"><i class="fas fa-check text-green-500 mr-3 text-lg"></i>Bandas Transportadoras</li>
-                </ul>
-            </div>
-
-        </div>
-
-        <!-- Sustituye 'maquina-inferior.png' por tu archivo -->
-        <img src="Motores.png" alt="Motoreductor Sumitomo Aplicación" class="block mx-auto w-full max-w-2xl object-contain drop-shadow-xl hover:-translate-y-2 transition-transform duration-500">
-    </div>
     </section>
 
-    <a href="https://wa.me/522721498040" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50 hover:scale-110 transition-transform duration-300 flex items-center justify-center">
-    <!-- Cambia 'icono-whatsapp.png' por el nombre real de tu imagen -->
-    <img src="whatsapp.png" alt="Chat de WhatsApp" class="w-14 h-18 md:w-18 md:h-18 object-contain drop-shadow-[0_10px_20px_rgba(37,211,102,0.5)]">
-    </a>
-
-
-
-
-
- <footer id="contacto" class="relative bg-[#0a192f] font-['Montserrat',_sans-serif] flex overflow-hidden">
-    
-
-    <img 
-        src="Fondo-azul.jpg" 
-        alt="Fondo Lámina Verde" 
-        class="absolute inset-0 w-full h-full object-cover z-0 mix-blend-overlay opacity-80"
-    >
-
-    <!-- Contenedor Flex Principal (Alineado al fondo) -->
-    <div class="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-end justify-between">
+    <!-- ==========================================
+         SECCIÓN: MARCAS QUE MANEJAMOS (3 LÍNEAS RÁPIDAS)
+         ========================================== -->
+    <section class="relative bg-white py-16 font-['Montserrat',_sans-serif] overflow-hidden border-y border-gray-100">
+        <!-- Círculo decorativo de fondo -->
+        <div class="absolute top-0 left-0 w-64 h-64 bg-blue-50 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 opacity-60"></div>
         
-        <!-- LADO IZQUIERDO (Íconos en línea + Línea Blanca + Texto Inferior) -->
-        <div class="w-full md:flex-1 flex flex-col pt-10 pb-3 pl-4 pr-6 md:pl-8 md:pr-10">
+        <div class="relative z-10 w-full flex flex-col items-center">
             
-            <!-- Contenedor de los 4 Íconos en Línea -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-white text-center items-end mb-5">
+            <!-- Título de la Sección -->
+            <h2 class="text-[#004b93] text-2xl md:text-4xl font-extrabold uppercase tracking-wide mb-3 text-center">
+                Marcas que trabajamos
+            </h2>
+            <div class="w-40 h-1.5 bg-[] mx-auto rounded-full mb-12"></div>
+
+            <!-- CONTENEDOR PRINCIPAL DEL CARRUSEL -->
+            <div class="w-full overflow-hidden relative flex flex-col gap-6 md:gap-10 marquee-container">
                 
-                <!-- 1. Horario -->
-                <div class="flex flex-col items-center justify-end h-full">
-                    <img src="tiempo.png" alt="Horario" class="h-10 md:h-12 object-contain mb-2">
-                    <h4 class="font-bold text-xs md:text-sm mb-1">Horario de Atención</h4>
-                    <p class="text-[10px] md:text-xs leading-tight">Lun - Vie | 09:30 a 18:30 HRS<br>Sab | 9:30 a 15:30 HRS</p>
+                <!-- Sombras de desvanecimiento a los lados -->
+                <div class="absolute top-0 left-0 w-16 md:w-40 h-full bg-gradient-to-r from-white to-transparent z-20 pointer-events-none"></div>
+                <div class="absolute top-0 right-0 w-16 md:w-40 h-full bg-gradient-to-l from-white to-transparent z-20 pointer-events-none"></div>
+                
+                <!-- ================= LÍNEA 1 (Hacia la izquierda - 20s) ================= -->
+                <!-- Recuerda que siempre debes repetir las imágenes 2 veces por línea -->
+                <div class="animate-scrolling-logos flex items-center gap-12 md:gap-24 px-6">
+                    <!-- Set 1 -->
+                    <img src="Sumitomo_Drive_Technologiles_logo.svg.png" alt="Sumitomo" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/A-B-B.png" alt="ABB" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/allen-bradley.png" alt="Allen Bradley" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/ASCO.webp" alt="ASCO" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/Axis_Communications_logo.svg.webp" alt="Axis" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/Baldor.png" alt="Baldor" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/boston12.svg" alt="Boston" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/Burket.png" alt="Burkert" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/Wilo-Logo.png" alt="Camozzi" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <!-- Set 2 (Repetición Obligatoria) -->
+                    <img src="Sumitomo_Drive_Technologiles_logo.svg.png" alt="Sumitomo" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/A-B-B.png" alt="ABB" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/allen-bradley.png" alt="Allen Bradley" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/ASCO.webp" alt="ASCO" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/Axis_Communications_logo.svg.webp" alt="Axis" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/Baldor.png" alt="Baldor" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/boston12.svg" alt="Boston" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/Burket.png" alt="Burkert" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
                 </div>
 
-                <!-- 2. Ubicación  -->
-                <a href="https://maps.app.goo.gl/EZtrTciufw9fJPoB9" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform cursor-pointer relative z-20">
-                <img src="ubicacion.png" alt="Ubicación" class="h-10 md:h-12 object-contain mb-2">
-                 <p class="text-xs md:text-sm">Oriente 10 #718, Orizaba</p>
-                    </a>
-                <!-- 3. Teléfono / WhatsApp -->
-                <a href="https://wa.me/522721498040" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform">
-                    <img src="telefono.png" alt="Teléfono" class="h-10 md:h-12 object-contain mb-2">
-                    <p class="text-xs md:text-sm">(272) 149 8040</p>
-                </a>
+                <!-- ================= LÍNEA 2 (Hacia la derecha - 25s) ================= -->
+                <div class="animate-scrolling-logos-reverse flex items-center gap-12 md:gap-24 px-6">
+                    <!-- Set 1 -->
+                    <img src="Iconos-logos/camozzi1.png" alt="Camozzi" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/columbus-mckinnon.png" alt="Columbus" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/dahua.png" alt="Dahua" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/Danfoss.png" alt="Danfoss" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/DEMAG.png" alt="Demag" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/Dewalt_Logo_2023.png" alt="DeWalt" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/Digi-key.png" alt="Digi-key" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/dodge.png" alt="Dodge" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    
+                    <!-- Set 2 (Repetición Obligatoria) -->
+                    <img src="Iconos-logos/camozzi1.png" alt="Camozzi" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/columbus-mckinnon.png" alt="Columbus" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/dahua.png" alt="Dahua" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/Danfoss.png" alt="Danfoss" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/DEMAG.png" alt="Demag" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/Dewalt_Logo_2023.png" alt="DeWalt" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/Digi-key.png" alt="Digi-key" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/dodge.png" alt="Dodge" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                </div>
 
-                <!-- 4. Sitio Web -->
-                <a href="https://www.fph.com.mx" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform">
-                    <img src="Sitio web.png" alt="Sitio Web" class="h-10 md:h-12 object-contain mb-2">
-                    <p class="text-xs md:text-sm">www.fph.com.mx</p>
-                </a>
+                <!-- ================= LÍNEA 3 (Hacia la izquierda - 15s) ================= -->
+                <div class="animate-scrolling-logos-fast flex items-center gap-12 md:gap-24 px-6">
+                    <!-- Set 1 -->
+                    <img src="Iconos-logos/dow-water.webp" alt="Dow Water" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/drive1.jpg" alt="Drive" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/electronics1.svg" alt="Electronics" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/FAG.png" alt="FAG" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/festo-logo.webp" alt="Festo" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/flowserve.png" alt="Flowserve" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/grundfos.webp" alt="Grundfos" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/SCHNEIDER-Electric.webp" alt="Schneider" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    
+                    <!-- Set 2 (Repetición Obligatoria) -->
+                    <img src="Iconos-logos/dow-water.webp" alt="Dow Water" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/drive1.jpg" alt="Drive" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/electronics1.svg" alt="Electronics" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/FAG.png" alt="FAG" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/festo-logo.webp" alt="Festo" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/flowserve.png" alt="Flowserve" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/grundfos.webp" alt="Grundfos" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                    <img src="Iconos-logos/SCHNEIDER-Electric.webp" alt="Schneider" class="h-10 md:h-14 w-auto object-contain hover:scale-110 transition-transform duration-300">
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ==========================================
+         SECCIÓN MRO
+         ========================================== -->
+    <section id="mro" class="py-20 px-6 bg-gray-50 font-['Montserrat',_sans-serif]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h4 class="text-[#2563eb] font-bold tracking-widest uppercase text-sm mb-3">Soluciones Integrales</h4>
+                <h2 class="text-[#004b93] text-3xl md:text-5xl font-extrabold uppercase tracking-wide mb-6">Suministros MRO</h2>
+                <div class="w-120 h-1.5 bg-[#087A4A] mx-auto rounded-full mb-12"></div>
+                <p class="text-gray-600 text-lg md:text-xl font-medium max-w-3xl mx-auto">
+                    Respaldo integral para el <span class="font-bold text-[#004b93]">Mantenimiento, Reparación y Operación</span> de su planta industrial.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+                <div class="bg-white rounded-[2rem] p-6 md:p-8 shadow-lg hover:shadow-2xl flex flex-col hover:-translate-y-3 transition-all duration-300 group border border-gray-100 relative overflow-hidden">
+                    <div class="w-full h-56 overflow-hidden rounded-2xl mb-6 relative">
+                        <div class="absolute inset-0 bg-[#004b93] opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"></div>
+                        <img src="Inicio/Agroindustria.webp" alt="Agroindustria" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <h3 class="text-[#004b93] text-2xl font-bold mb-3 uppercase tracking-wide group-hover:text-[#2563eb] transition-colors">Agroindustria y Extracción</h3>
+                    <p class="text-gray-600 text-base leading-relaxed">
+                        Proveemos los consumibles, rodamientos y lubricación especializada para soportar ambientes agresivos, alta fricción y operaciones continuas 24/7.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-[2rem] p-6 md:p-8 shadow-lg hover:shadow-2xl flex flex-col hover:-translate-y-3 transition-all duration-300 group border border-gray-100 relative overflow-hidden">
+                    <div class="w-full h-56 overflow-hidden rounded-2xl mb-6 relative">
+                        <div class="absolute inset-0 bg-[#004b93] opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"></div>
+                        <img src="Inicio/Manufactura y Líneas de Producción.webp" alt="Líneas de Producción" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <h3 class="text-[#004b93] text-2xl font-bold mb-3 uppercase tracking-wide group-hover:text-[#2563eb] transition-colors">Manufactura y Producción</h3>
+                    <p class="text-gray-600 text-base leading-relaxed">
+                        Evite paros no programados. Suministramos refacciones, neumática y componentes de transmisión críticos para mantener sus líneas de ensamblaje en movimiento.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-[2rem] p-6 md:p-8 shadow-lg hover:shadow-2xl flex flex-col hover:-translate-y-3 transition-all duration-300 group border border-gray-100 relative overflow-hidden">
+                    <div class="w-full h-56 overflow-hidden rounded-2xl mb-6 relative">
+                        <div class="absolute inset-0 bg-[#004b93] opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"></div>
+                        <img src="Inicio/mantenimiento industrial.jpg" alt="Mantenimiento Industrial" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <h3 class="text-[#004b93] text-2xl font-bold mb-3 uppercase tracking-wide group-hover:text-[#2563eb] transition-colors">Mantenimiento Pesado</h3>
+                    <p class="text-gray-600 text-base leading-relaxed">
+                        Herramientas de grado industrial, sellado de alta resistencia y componentes hidráulicos diseñados para soportar las cargas más extremas de su maquinaria.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-[2rem] p-6 md:p-8 shadow-lg hover:shadow-2xl flex flex-col hover:-translate-y-3 transition-all duration-300 group border border-gray-100 relative overflow-hidden">
+                    <div class="w-full h-56 overflow-hidden rounded-2xl mb-6 relative">
+                        <div class="absolute inset-0 bg-[#004b93] opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"></div>
+                        <img src="MRO/Suministros y Seguridad de Planta1.webp" alt="Suministros de Planta" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <h3 class="text-[#004b93] text-2xl font-bold mb-3 uppercase tracking-wide group-hover:text-[#2563eb] transition-colors">Suministros y Seguridad</h3>
+                    <p class="text-gray-600 text-base leading-relaxed">
+                        Gestión integral de repuestos generales y equipo de protección (EPP) para asegurar que sus técnicos operen en un entorno seguro y altamente productivo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==========================================
+         SECCIÓN CONTACTO
+         ========================================== -->
+    <section id="contacto" class="relative bg-white py-24 px-6 font-['Montserrat',_sans-serif] overflow-hidden">
+        
+        <!-- Fondo decorativo sesgado (Gris muy sutil) -->
+        <div class="absolute inset-0 bg-gray-50 skew-y-3 transform origin-bottom-left -z-20"></div>
+
+        <!-- ==========================================
+             ESPACIO PARA TU FOTO DE FONDO O LOGO MARCA DE AGUA
+             Cambia el src por la imagen o logo que quieras de fondo.
+             La opacidad está al 5% (opacity-5) para que no estorbe la lectura.
+             ========================================== -->
+        <img src="Inicio/fph-logo-blanco.png" alt="Fondo FPH" class="absolute top-1/4 right-0 transform -translate-y-1 w-full md:w-1/2 object-contain opacity-5 pointer-events-none -z-10">
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start relative z-10">
+            
+            <!-- COLUMNA IZQUIERDA: Textos y Mapa (Ahora es MÁS ANCHA: ocupa 7 columnas) -->
+            <div class="lg:col-span-7 flex flex-col justify-center">
+                <h4 class="text-[#2563eb] font-bold tracking-widest uppercase text-sm mb-3">Trabajemos juntos</h4>
+                <h2 class="text-[#004b93] text-4xl md:text-5xl font-extrabold mb-6 leading-tight">¿Listo para optimizar tu planta?</h2>
+                <p class="text-gray-600 font-medium mb-10 text-base md:text-lg leading-relaxed max-w-2xl">
+                    Conectamos calidad, rapidez y experiencia para cubrir todas tus necesidades industriales. Escríbenos y un experto te atenderá de inmediato.
+                </p>
+                
+                <!-- Contenedor del Mapa (Ahora es MÁS GRANDE y ALTO) -->
+                <div class="w-full h-80 md:h-[400px] bg-gray-200 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.918329591888!2d-97.09935112627021!3d18.84629885914636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c5037a5c781613%3A0x402c0d3d5b64d18!2sFrio%20Potencia%20y%20Herramientas%20S.A.%20de%20C.V.%20%7C%20MRO%3A%20HVACR%2C%20Transmisi%C3%B3n%20de%20Potencia%20y%20M%C3%A1s...!5e0!3m2!1ses-419!2smx!4v1790965094549!5m2!1ses-419!2smx" width="700" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
             </div>
 
-            <!-- Línea Blanca Gruesa -->
-            <div class="w-full h-1 md:h-1.5 bg-white mb-2"></div>
+            <!-- COLUMNA DERECHA: Formulario (Ahora es MÁS ANGOSTO: ocupa 5 columnas y es Gris) -->
+            <div class="lg:col-span-5 flex justify-end">
+                <!-- Fondo Gris (bg-gray-100) para el formulario -->
+                <div class="w-full max-w-[500px] bg-gray-100 rounded-[2rem] p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-t-8 border-[#087A4A]">
+                    
+                    <h3 class="text-[#004b93] text-2xl md:text-3xl font-bold mb-8">Envíanos tu consulta</h3>
+                    
+                    <form action="#" method="POST" class="space-y-6">
+                        
+                        <!-- Grid para Nombre y Teléfono en la misma fila -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-gray-600 text-xs font-bold mb-2 uppercase tracking-wider">Nombre completo</label>
+                                <!-- Campos en blanco (bg-white) para que resalten sobre el fondo gris -->
+                                <input type="text" placeholder="Ej. Juan Pérez" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#2563eb] transition-all font-medium shadow-sm">
+                            </div>
+                            <div>
+                                <label class="block text-gray-600 text-xs font-bold mb-2 uppercase tracking-wider">Teléfono</label>
+                                <input type="tel" placeholder="Ej. 555 123 4567" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#2563eb] transition-all font-medium shadow-sm">
+                            </div>
+                        </div>
 
-            <!-- Texto Inferior (Letras Chiquitas) -->
-            <p class="text-white text-xs md:text-sm font-bold tracking-wide">
-                FRIO POTENCIA Y HERRAMIENTAS S.A. DE C.V.
-            </p>
-        </div>
+                        <div>
+                            <label class="block text-gray-600 text-xs font-bold mb-2 uppercase tracking-wider">Correo Electrónico</label>
+                            <input type="email" placeholder="tu@empresa.com" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#2563eb] transition-all font-medium shadow-sm">
+                        </div>
 
-        <div class="w-40 md:w-56 shrink-0 flex items-end justify-center">
-            <a href="#inicio" title="Volver al Inicio">
-                <img 
-                    src="fph-logo-rojo.png" 
-                    alt="Logo FPH Rojo" 
-                    class="w-full h-auto object-cover drop-shadow-2xl hover:brightness-110 transition-all"
-                >
-            </a>
+                        <div>
+                            <label class="block text-gray-600 text-xs font-bold mb-2 uppercase tracking-wider">¿En qué podemos ayudarte?</label>
+                            <textarea rows="4" placeholder="Escribe aquí los detalles..." class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#2563eb] transition-all font-medium resize-none shadow-sm"></textarea>
+                        </div>
+
+                        <!-- ReCAPTCHA -->
+                        <div class="bg-white border border-gray-200 rounded-xl p-4 flex items-center justify-between w-full shadow-sm">
+                            <div class="flex items-center gap-3">
+                                <input type="checkbox" class="w-6 h-6 border-gray-300 rounded cursor-pointer text-[#25d366] focus:ring-[#2563eb]">
+                                <span class="text-sm font-bold text-gray-700">No soy un robot</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <i class="fas fa-sync-alt text-[#2563eb] text-xl"></i>
+                                <span class="text-[10px] text-gray-500 mt-1 font-bold">reCAPTCHA</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full bg-[#004b93] text-white font-extrabold text-base md:text-lg rounded-xl py-4 mt-2 hover:bg-[#087A4A] hover:text-[#0a192f] hover:shadow-lg transition-all duration-300 uppercase tracking-widest">
+                            Enviar Mensaje <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                        
+                    </form>
+                </div>
+            </div>
+            
         </div>
-        
-    </div>
-</footer>
+    </section>
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer id="footer-contacto" class="relative bg-[#0a192f] font-['Montserrat',_sans-serif] flex overflow-hidden">
+        <div class="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-end justify-between">
+            <div class="w-full md:flex-1 flex flex-col pt-10 pb-3 pl-4 pr-6 md:pl-8 md:pr-10">
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 text-white text-center items-end mb-5">
+                    <a href="mailto:ventas@fph.com.mx" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform cursor-pointer relative z-20">
+                        <img src="Inicio/mensaje.png" alt="Correo Electrónico" class="h-8 md:h-10 object-contain mb-2">
+                        <p class="text-xs md:text-sm">ventas@fph.com.mx</p>
+                    </a>
+                    <a href="https://maps.app.goo.gl/w4Ze7WfMjPsbA1zM6" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform cursor-pointer relative z-20">
+                        <img src="Inicio/ubicacion.png" alt="Ubicación" class="h-8 md:h-10 object-contain mb-2">
+                        <p class="text-xs md:text-sm">Oriente 10 #718, Orizaba</p>
+                    </a>
+                    <a href="https://wa.me/522721498040" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform relative z-20">
+                        <img src="Inicio/whatsapp (1).png" alt="WhatsApp" class="h-8 md:h-10 object-contain mb-2">
+                        <p class="text-xs md:text-sm">(272) 149 8040</p>
+                    </a>
+                    <a href="tel:+52(272) 724 4235" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform relative z-20">
+                        <img src="Inicio/telefono.png" alt="Teléfono" class="h-8 md:h-10 object-contain mb-2">
+                        <p class="text-xs md:text-sm">(272) 724 4235</p>    
+                    </a>
+                    <a href="https://www.fph.com.mx" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform relative z-20">
+                        <img src="Inicio/Sitio web.png" alt="Sitio Web" class="h-8 md:h-10 object-contain mb-2">
+                        <p class="text-xs md:text-sm">www.fph.com.mx</p>
+                    </a>
+                </div>
+                <div class="w-full h-1 md:h-1.5 bg-white mb-2"></div>
+                <p class="text-white text-xs md:text-sm font-bold tracking-wide">FPH S.A. DE C.V.</p>
+            </div>
+            <div class="w-40 md:w-56 shrink-0 flex items-end justify-center">
+                <a href="#inicio" title="Volver al Inicio" class="relative z-20">
+                    <img src="Inicio/fph-logo-blanco.png" alt="Logo FPH" class="w-full h-auto object-cover drop-shadow-2xl hover:brightness-110 transition-all">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPT PARA EL MENÚ MÓVIL Y DESPLAZAMIENTO SUAVE -->
+    <script>
+        const btnMenu = document.getElementById('mobile-menu-btn');
+        const menuMobile = document.getElementById('mobile-menu');
+        const enlacesMobile = document.querySelectorAll('.mobile-link');
+
+        // Abrir y cerrar el menú móvil al hacer clic en el botón de hamburguesa
+        btnMenu.addEventListener('click', () => {
+            menuMobile.classList.toggle('hidden');
+        });
+
+        // Cerrar el menú automáticamente al hacer clic en una opción (útil para celulares)
+        enlacesMobile.forEach(enlace => {
+            enlace.addEventListener('click', () => {
+                menuMobile.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

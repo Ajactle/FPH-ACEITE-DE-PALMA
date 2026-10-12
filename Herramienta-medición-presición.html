@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPH - Soluciones para Aceite de Palma</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+<!-- ==========================================
+         ENCABEZADO / NAVBAR PARA PÁGINAS DE PRODUCTOS
+         (Redirige correctamente a index.html)
+         ========================================== -->
+    <nav class="absolute top-0 left-0 w-full z-50 font-['Montserrat',_sans-serif]">
+        <div class="max-w-7xl mx-auto px-6 py-4 md:py-6 flex justify-between items-center relative">
+            
+            <!-- LOGO (Regresa al inicio del Index) -->
+            <div class="flex items-center">
+                <a href="index.html#inicio">
+                    <img src="Inicio/fph-logo-blanco.png" alt="Logo FPH" class="h-16 md:h-24 object-contain brightness-0 invert md:brightness-100 md:invert-0">
+                </a>
+            </div>
+            
+            <!-- CENTRO: Enlaces de Navegación (Desktop) -->
+            <div class="hidden md:flex flex-1 justify-center items-center gap-10 text-white text-sm md:text-base font-semibold tracking-wide">
+                <!-- Nota cómo ahora tienen "index.html" antes del "#" -->
+                <a href="index.html#inicio" class="hover:text-[#25d366] transition-colors drop-shadow-md">INICIO</a>
+                <a href="index.html#nosotros" class="hover:text-[#25d366] transition-colors drop-shadow-md no-underline">NOSOTROS</a>
+
+                <div class="relative group h-full flex items-center">
+                    <a href="Potencia.html" class="flex items-center gap-1.5 text-[#25d366] drop-shadow-md py-4 cursor-pointer">
+                        PRODUCTOS <i class="fas fa-chevron-down text-[10px] opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
+                </div>
+                
+                <a href="index.html#mro" class="hover:text-[#25d366] transition-colors drop-shadow-md">MRO</a>
+                <a href="index.html#contacto" class="hover:text-[#25d366] transition-colors drop-shadow-md">CONTACTO</a>
+            </div>
+
+            <!-- LADO DERECHO: Botón Menú Móvil -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-white text-3xl focus:outline-none drop-shadow-md">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MENU MÓVIL DESPLEGABLE (Oculto por defecto) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#0a192f] absolute top-full left-0 w-full shadow-lg border-t border-white/10">
+            <div class="flex flex-col text-white text-sm font-semibold tracking-wide p-6 gap-6">
+                <!-- Igual aquí para celular, tienen "index.html" -->
+                <a href="index.html#inicio" class="mobile-link hover:text-[#ffc107] transition-colors">INICIO</a>
+                <a href="index.html#nosotros" class="mobile-link hover:text-[#ffc107] transition-colors">NOSOTROS</a>
+                <a href="Potencia.html" class="mobile-link text-[#ffc107] transition-colors">PRODUCTOS</a>
+                <a href="index.html#mro" class="mobile-link hover:text-[#ffc107] transition-colors">MRO</a>
+                <a href="index.html#contacto" class="mobile-link hover:text-[#ffc107] transition-colors">CONTACTO</a>
+            </div>
+        </div>
+    </nav>
+       
+    <!-- ==========================================
+         HERO SECTION (VIDEO)
+         ========================================== -->
+    <section id="inicio" class="relative font-['Montserrat',_sans-serif] flex flex-col w-full h-[80vh] md:h-[98vh] overflow-hidden" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 95%, 0 100%);">
+        <div class="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none bg-[#0a192f]">
+            <video autoplay loop muted playsinline class="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2">
+                <source src="Productos/Herramientas/Herramienta-medición-presición/Medición.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="absolute inset-0 bg-[#0a192f]/60 z-10"></div>
+        <div class="relative z-20 w-full h-full max-w-5xl mx-auto px-6 flex flex-col items-center justify-center text-center pt-10">
+            <h1 class="text-white text-4xl md:text-6xl font-bold uppercase leading-tight drop-shadow-xl tracking-wide mb-4">
+              Herramientas de Medición y Precisión
+            </h1>
+        </div>
+    </section>
+
+    <section id="pinones" class="py-16 px-6 bg-white font-['Open_Sans',_sans-serif]">
+    <div class="max-w-7xl mx-auto">
+        
+        <!-- BANNER AZUL -->
+        <div class="w-full bg-[#004b93] py-4 md:py-5 px-4 mb-10 shadow-md rounded-sm">
+            <h2 class="text-white text-center text-base md:text-lg lg:text-xl font-bold uppercase tracking-wider drop-shadow-sm">
+                "Precisión absoluta: porque cada milímetro cuenta en tu producción."
+            </h2>
+        </div>
+
+        <!-- Enlace "Ver todos >" -->
+        <div class="w-full flex justify-end mb-6">
+            <a href="Potencia.html" class="text-blue-600 text-lg md:text-xl font-bold flex items-center gap-2 hover:text-[#004b93] transition-colors cursor-pointer">
+                Ver todos <i class="fas fa-chevron-right text-base mt-1"></i>
+            </a>
+        </div>
+
+        <!-- CUADRÍCULA DE PRODUCTOS -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Tarjeta 1: Calibradores Vernier -->
+            <div class="bg-gradient-to-b from-gray-50 to-gray-200 p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-start border border-gray-200 rounded-xl h-full">
+                <img src="productos/Herramientas/Herramienta-medición-presición/Calibradores Vernier (Pie de rey).png" alt="Calibradores Vernier (Pie de rey)" class="w-full h-48 object-contain mb-6 hover:scale-105 transition-transform duration-500">
+                <div class="w-full flex flex-col flex-1 text-left">
+                    <h3 class="text-[#2563eb] text-xl font-bold mb-3 uppercase">Calibradores Vernier (Pie de rey)</h3>                    
+                    <div class="text-justify text-gray-700 text-sm leading-relaxed mb-2 text-content">
+                        Mediciones exactas de dimensiones internas, externas y de profundidad.
+                        <!-- Texto oculto -->
+                        <span class="more-text hidden">
+                            <br><br>Ideales para talleres mecánicos, tornería y control de calidad. Disponibles en versiones analógicas y digitales, garantizan una lectura precisa y confiable en fracciones de milímetro o pulgadas, asegurando que sus piezas cumplan con las tolerancias requeridas.
+                        </span>
+                    </div>
+                    <button class="read-more-btn text-[#2563eb] text-sm font-semibold hover:underline mb-6 text-left w-fit cursor-pointer">Ver más</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2: Micrómetros -->
+            <div class="bg-gradient-to-b from-gray-50 to-gray-200 p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-start border border-gray-200 rounded-xl h-full">
+                <img src="productos/Herramientas/Herramienta-medición-presición/Micrómetros.png" alt="Micrómetros" class="w-full h-48 object-contain mb-6 hover:scale-105 transition-transform duration-500">
+                <div class="w-full flex flex-col flex-1 text-left">
+                    <h3 class="text-[#2563eb] text-xl font-bold mb-3 uppercase">Micrómetros y relojes comparadores</h3>                    
+                    <div class="text-justify text-gray-700 text-sm leading-relaxed mb-2 text-content">
+                        Máxima precisión para medir espesores y diámetros a nivel microscópico.
+                        <!-- Texto oculto -->
+                        <span class="more-text hidden">
+                            <br><br>Indispensables en la fabricación y maquinado de piezas donde las tolerancias son críticas. Permiten medir centésimas o milésimas de milímetro, asegurando el acople perfecto y el funcionamiento sin fricción en componentes de alta ingeniería.
+                        </span>
+                    </div>
+                    <button class="read-more-btn text-[#2563eb] text-sm font-semibold hover:underline mb-6 text-left w-fit cursor-pointer">Ver más</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3: Indicadores de carátula -->
+            <div class="bg-gradient-to-b from-gray-50 to-gray-200 p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-start border border-gray-200 rounded-xl h-full">
+                <img src="productos/Herramientas/Herramienta-medición-presición/Indicadores de carátula.png" alt="Indicadores de carátula" class="w-full h-48 object-contain mb-6 hover:scale-105 transition-transform duration-500">
+                <div class="w-full flex flex-col flex-1 text-left">
+                    <h3 class="text-[#2563eb] text-xl font-bold mb-3 uppercase">Indicadores de carátula</h3>                    
+                    <div class="text-justify text-gray-700 text-sm leading-relaxed mb-2 text-content">
+                        Verificación rápida de variaciones en superficies y alineación de ejes.
+                        <!-- Texto oculto -->
+                        <span class="more-text hidden">
+                            <br><br>Utilizados ampliamente para comprobar la planitud, concentricidad y paralelismo en piezas de maquinaria rotativa. Su mecanismo sensible detecta las mínimas irregularidades geométricas, previniendo fallos catastróficos por desalineación.
+                        </span>
+                    </div>
+                    <button class="read-more-btn text-[#2563eb] text-sm font-semibold hover:underline mb-6 text-left w-fit cursor-pointer">Ver más</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4: Medidores de espesores (Lainas) -->
+            <div class="bg-gradient-to-b from-gray-50 to-gray-200 p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-start border border-gray-200 rounded-xl h-full">
+                <img src="productos/Herramientas/Herramienta-medición-presición/Medidores de espesores (Lainas).png" alt="Medidores de espesores (Lainas)" class="w-full h-48 object-contain mb-6 hover:scale-105 transition-transform duration-500">
+                <div class="w-full flex flex-col flex-1 text-left">
+                    <h3 class="text-[#2563eb] text-xl font-bold mb-3 uppercase">Medidores de espesores (Lainas)</h3>                    
+                    <div class="text-justify text-gray-700 text-sm leading-relaxed mb-2 text-content">
+                        Calibración precisa de holguras y separaciones entre componentes.
+                        <!-- Texto oculto -->
+                        <span class="more-text hidden">
+                            <br><br>Juegos de láminas de acero calibradas, fundamentales para ajustar válvulas, bujías y holguras de rodamientos. Indispensables en el mantenimiento automotriz e industrial para asegurar que los mecanismos operen fluidamente evitando desgastes prematuros.
+                        </span>
+                    </div>
+                    <button class="read-more-btn text-[#2563eb] text-sm font-semibold hover:underline mb-6 text-left w-fit cursor-pointer">Ver más</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 5: Cámaras termográficas -->
+            <div class="bg-gradient-to-b from-gray-50 to-gray-200 p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-start border border-gray-200 rounded-xl h-full">
+                <img src="productos/Herramientas/Herramienta-medición-presición/Cámaras termográficas.png" alt="Cámaras termográficas" class="w-full h-48 object-contain mb-6 hover:scale-105 transition-transform duration-500">
+                <div class="w-full flex flex-col flex-1 text-left">
+                    <h3 class="text-[#2563eb] text-xl font-bold mb-3 uppercase">Cámaras termográficas</h3>                    
+                    <div class="text-justify text-gray-700 text-sm leading-relaxed mb-2 text-content">
+                        Diagnóstico preventivo mediante la visualización de patrones de calor.
+                        <!-- Texto oculto -->
+                        <span class="more-text hidden">
+                            <br><br>Detecte sobrecalentamientos en tableros eléctricos, fricción excesiva en motores y fugas en sistemas térmicos antes de que ocurra una falla. Es la herramienta definitiva y no invasiva para ejecutar un mantenimiento predictivo industrial altamente eficiente.
+                        </span>
+                    </div>
+                    <button class="read-more-btn text-[#2563eb] text-sm font-semibold hover:underline mb-6 text-left w-fit cursor-pointer">Ver más</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 6: Termómetros infrarrojos -->
+            <div class="bg-gradient-to-b from-gray-50 to-gray-200 p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-start border border-gray-200 rounded-xl h-full">
+                <img src="productos/Herramientas/Herramienta-medición-presición/Termómetros infrarrojos (láser).png" alt="Termómetros infrarrojos (láser)" class="w-full h-48 object-contain mb-6 hover:scale-105 transition-transform duration-500">
+                <div class="w-full flex flex-col flex-1 text-left">
+                    <h3 class="text-[#2563eb] text-xl font-bold mb-3 uppercase">Termómetros infrarrojos (láser)</h3>
+                    <div class="text-justify text-gray-700 text-sm leading-relaxed mb-2 text-content">
+                        Medición de temperatura a distancia, segura e instantánea.
+                        <!-- Texto oculto -->
+                        <span class="more-text hidden">
+                            <br><br>Perfectos para inspeccionar piezas en movimiento, superficies a altas temperaturas o componentes eléctricos energizados. Su puntero láser asegura que la lectura térmica se tome exactamente en el punto crítico deseado sin exponer al operador a riesgos.
+                        </span>
+                    </div>
+                    <button class="read-more-btn text-[#2563eb] text-sm font-semibold hover:underline mb-6 text-left w-fit cursor-pointer">Ver más</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 7: Tacómetros -->
+            <div class="bg-gradient-to-b from-gray-50 to-gray-200 p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-start border border-gray-200 rounded-xl h-full">
+                <img src="productos/Herramientas/Herramienta-medición-presición/Tacómetros (láser o de contacto).png" alt="Tacómetros (láser o de contacto)" class="w-full h-48 object-contain mb-6 hover:scale-105 transition-transform duration-500">
+                <div class="w-full flex flex-col flex-1 text-left">
+                    <h3 class="text-[#2563eb] text-xl font-bold mb-3 uppercase">Tacómetros (láser o de contacto)</h3>
+                    <div class="text-justify text-gray-700 text-sm leading-relaxed mb-2 text-content">
+                        Medición precisa de la velocidad de rotación (RPM) en maquinaria.
+                        <!-- Texto oculto -->
+                        <span class="more-text hidden">
+                            <br><br>Equipos vitales para evaluar el rendimiento de motores, turbinas, ventiladores y bandas transportadoras. Disponibles en versiones ópticas (sin contacto) para lugares de difícil acceso o versiones mecánicas de contacto directo según sus requerimientos industriales.
+                        </span>
+                    </div>
+                    <button class="read-more-btn text-[#2563eb] text-sm font-semibold hover:underline mb-6 text-left w-fit cursor-pointer">Ver más</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 8: Medidores de vibración -->
+            <div class="bg-gradient-to-b from-gray-50 to-gray-200 p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-start border border-gray-200 rounded-xl h-full">
+                <img src="productos/Herramientas/Herramienta-medición-presición/Medidores de vibración (Vibrómetros).png" alt="Medidores de vibración (Vibrómetros)" class="w-full h-48 object-contain mb-6 hover:scale-105 transition-transform duration-500">
+                <div class="w-full flex flex-col flex-1 text-left">
+                    <h3 class="text-[#2563eb] text-xl font-bold mb-3 uppercase">Medidores de vibración (Vibrómetros)</h3>                    
+                    <div class="text-justify text-gray-700 text-sm leading-relaxed mb-2 text-content">
+                        Monitoreo de la salud mecánica de sus equipos rotativos.
+                        <!-- Texto oculto -->
+                        <span class="more-text hidden">
+                            <br><br>Permiten detectar desbalanceos, desalineaciones, holguras y fallas prematuras en rodamientos al analizar las frecuencias de vibración de la máquina. Es un pilar fundamental para evitar paros no programados mediante un sólido mantenimiento predictivo.
+                        </span>
+                    </div>
+                    <button class="read-more-btn text-[#2563eb] text-sm font-semibold hover:underline mb-6 text-left w-fit cursor-pointer">Ver más</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 9: Odómetro digital -->
+            <div class="bg-gradient-to-b from-gray-50 to-gray-200 p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-start border border-gray-200 rounded-xl h-full">
+                <img src="productos/Herramientas/Herramienta-medición-presición/Odometro digital.png" alt="Odometro digital" class="w-full h-48 object-contain mb-6 hover:scale-105 transition-transform duration-500">
+                <div class="w-full flex flex-col flex-1 text-left">
+                    <h3 class="text-[#2563eb] text-xl font-bold mb-3 uppercase">Odómetro digital</h3>
+                    <div class="text-justify text-gray-700 text-sm leading-relaxed mb-2 text-content">
+                        Medición rápida y exacta de distancias largas en terrenos y plantas.
+                        <!-- Texto oculto -->
+                        <span class="more-text hidden">
+                            <br><br>Rueda de medición ergonómica equipada con pantalla digital. Es la herramienta ideal para levantamientos topográficos ágiles, mediciones perimetrales, planeación de distribución en naves industriales y cálculo de trayectorias para cableados o tuberías.
+                        </span>
+                    </div>
+                    <button class="read-more-btn text-[#2563eb] text-sm font-semibold hover:underline mb-6 text-left w-fit cursor-pointer">Ver más</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 10: Manómetros y vacuómetros -->
+            <div class="bg-gradient-to-b from-gray-50 to-gray-200 p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-start border border-gray-200 rounded-xl h-full">
+                <img src="productos/Herramientas/Herramienta-medición-presición/Manómetros y vacuómetros.png" alt="Manómetros y vacuómetros" class="w-full h-48 object-contain mb-6 hover:scale-105 transition-transform duration-500">
+                <div class="w-full flex flex-col flex-1 text-left">
+                    <h3 class="text-[#2563eb] text-xl font-bold mb-3 uppercase">Manómetros y vacuómetros</h3>
+                    <div class="text-justify text-gray-700 text-sm leading-relaxed mb-2 text-content">
+                        Control visual exacto de la presión y el vacío en sistemas de fluidos.
+                        <!-- Texto oculto -->
+                        <span class="more-text hidden">
+                            <br><br>Elementos críticos de monitoreo y seguridad para sistemas neumáticos e hidráulicos. Aseguran que compresores, bombas y circuitos internos operen dentro de los rangos óptimos establecidos, previniendo caídas de tensión, sobrepresiones y fugas peligrosas.
+                        </span>
+                    </div>
+                    <button class="read-more-btn text-[#2563eb] text-sm font-semibold hover:underline mb-6 text-left w-fit cursor-pointer">Ver más</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 11: Barómetro -->
+            <div class="bg-gradient-to-b from-gray-50 to-gray-200 p-6 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center justify-start border border-gray-200 rounded-xl h-full">
+                <img src="productos/Herramientas/Herramienta-medición-presición/Barometro.png" alt="Barómetro" class="w-full h-48 object-contain mb-6 hover:scale-105 transition-transform duration-500">
+                <div class="w-full flex flex-col flex-1 text-left">
+                    <h3 class="text-[#2563eb] text-xl font-bold mb-3 uppercase">Barómetro</h3>
+                    <div class="text-justify text-gray-700 text-sm leading-relaxed mb-2 text-content">
+                        Monitoreo estricto de la presión atmosférica para procesos sensibles.
+                        <!-- Texto oculto -->
+                        <span class="more-text hidden">
+                            <br><br>Instrumentos de alta sensibilidad utilizados en laboratorios de calibración, cuartos limpios e industrias químicas donde los cambios en las condiciones ambientales afectan directamente la calidad de formulación, los procesos de combustión o los ensayos de materiales.
+                        </span>
+                    </div>
+                    <button class="read-more-btn text-[#2563eb] text-sm font-semibold hover:underline mb-6 text-left w-fit cursor-pointer">Ver más</button>
+                </div>
+            </div>
+
+            <!-- Tarjeta 12: Llamado a la acción -->
+            <a href="index.html#contacto" class="bg-gradient-to-b from-gray-50 to-gray-200 p-6 shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 flex flex-col items-center justify-center border border-gray-200 rounded-xl h-full cursor-pointer group block">
+                <img src="inicio/engranaje.png" alt="Solicita tu pieza" class="w-full h-32 md:h-40 object-contain mb-6 group-hover:scale-105 transition-transform duration-500">
+                <div class="w-full flex flex-col text-center justify-center">
+                    <h3 class="text-[#2563eb] text-xl md:text-2xl font-bold mb-3 uppercase group-hover:text-[#004b93] transition-colors">¿Buscas otra herramienta?</h3>
+                    <p class="text-gray-700 text-base font-medium leading-relaxed">
+                        Contáctanos. Trabajamos con las mejores marcas para conseguir exactamente el equipo de metrología que tu proyecto necesita.
+                    </p>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- CUADRO CON BORDE AMARILLO INFERIOR (Modificado para Medición) -->
+        <div class="mt-10 border-[3px] border-[#ffc107] bg-white p-5 shadow-sm rounded w-full">
+            <p class="text-justify text-gray-800 text-sm md:text-base font-medium leading-relaxed text-center">
+                <span class="font-bold text-[#004b93]">Instrumentos de Medición (Metrología):</span> La precisión es la base de la calidad industrial. Nuestra gama de equipos de metrología asegura que cada pieza, proceso y máquina opere dentro de las tolerancias exactas, permitiendo diagnósticos oportunos, un control de calidad riguroso y un mantenimiento predictivo altamente efectivo en su planta.
+            </p>
+        </div>
+
+    </div>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const readMoreBtns = document.querySelectorAll('.read-more-btn');
+
+        readMoreBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Busca el contenedor de texto oculto asociado a este botón
+                const hiddenText = this.previousElementSibling.querySelector('.more-text');
+                
+                if (hiddenText.classList.contains('hidden')) {
+                    hiddenText.classList.remove('hidden');
+                    this.textContent = 'Ver menos';
+                } else {
+                    hiddenText.classList.add('hidden');
+                    this.textContent = 'Ver más';
+                }
+            });
+        });
+    });
+</script>
+
+ <footer id="footer-contacto" class="relative bg-[#0a192f] font-['Montserrat',_sans-serif] flex overflow-hidden">
+        <div class="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-end justify-between">
+            <div class="w-full md:flex-1 flex flex-col pt-10 pb-3 pl-4 pr-6 md:pl-8 md:pr-10">
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 text-white text-center items-end mb-5">
+                    <a href="mailto:ventas@fph.com.mx" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform cursor-pointer relative z-20">
+                        <img src="Inicio/mensaje.png" alt="Correo Electrónico" class="h-8 md:h-10 object-contain mb-2">
+                        <p class="text-xs md:text-sm">ventas@fph.com.mx</p>
+                    </a>
+                    <a href="https://maps.app.goo.gl/w4Ze7WfMjPsbA1zM6" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform cursor-pointer relative z-20">
+                        <img src="Inicio/ubicacion.png" alt="Ubicación" class="h-8 md:h-10 object-contain mb-2">
+                        <p class="text-xs md:text-sm">Oriente 10 #718, Orizaba</p>
+                    </a>
+                    <a href="https://wa.me/522721498040" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform relative z-20">
+                        <img src="Inicio/whatsapp (1).png" alt="WhatsApp" class="h-8 md:h-10 object-contain mb-2">
+                        <p class="text-xs md:text-sm">(272) 149 8040</p>
+                    </a>
+                    <a href="tel:+52(272) 724 4235" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform relative z-20">
+                        <img src="Inicio/telefono.png" alt="Teléfono" class="h-8 md:h-10 object-contain mb-2">
+                        <p class="text-xs md:text-sm">(272) 724 4235</p>    
+                    </a>
+                    <a href="https://www.fph.com.mx" target="_blank" class="flex flex-col items-center justify-end h-full hover:scale-105 transition-transform relative z-20">
+                        <img src="Inicio/Sitio web.png" alt="Sitio Web" class="h-8 md:h-10 object-contain mb-2">
+                        <p class="text-xs md:text-sm">www.fph.com.mx</p>
+                    </a>
+                </div>
+                <div class="w-full h-1 md:h-1.5 bg-white mb-2"></div>
+                <p class="text-white text-xs md:text-sm font-bold tracking-wide">FPH S.A. DE C.V.</p>
+            </div>
+            <div class="w-40 md:w-56 shrink-0 flex items-end justify-center">
+                <a href="#inicio" title="Volver al Inicio" class="relative z-20">
+                    <img src="Inicio/fph-logo-blanco.png" alt="Logo FPH" class="w-full h-auto object-cover drop-shadow-2xl hover:brightness-110 transition-all">
+                </a>
+            </div>
+        </div>
+    </footer>
