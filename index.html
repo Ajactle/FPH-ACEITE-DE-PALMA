@@ -114,11 +114,11 @@
         </div>
     </nav>
 
-    <!-- ==========================================
+   
+<!-- ==========================================
          SECCIÓN PRINCIPAL (HERO)
-         ========================================== -->
-    <section id="inicio" class="relative font-['Montserrat',_sans-serif] flex flex-col w-full h-[80vh] md:h-[98vh] overflow-hidden" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 95%, 0 100%);">
-        
+========================================== -->
+<section id="inicio" class="relative z-20 font-['Montserrat',_sans-serif] flex flex-col w-full h-[80vh] md:h-[100vh] overflow-hidden" style="clip-path: polygon(0 0, 100% 0, 100% 92%, 50% 100%, 0 92%);">        
         <!-- Fondo de Video -->
         <div class="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none bg-[#0a192f]">
             <video autoplay loop muted playsinline class="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2">
@@ -131,7 +131,7 @@
                   
         <!-- Contenedor del Texto -->
         <div class="relative z-20 w-full h-full max-w-7xl mx-auto px-6 flex flex-col items-start justify-center text-left pt-16 md:pt-20">
-           <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-extrabold uppercase leading-snug drop-shadow-xl tracking-wide mb-6">
+           <h1 class="text-white text-1xl md:text-2xl lg:text-4xl font-extrabold uppercase leading-snug drop-shadow-xl tracking-wide mb-6">
             Soluciones Integrales <br>
              <span class="block mt-2 md:mt-4">
                Para la industria de aceite de palma
@@ -153,94 +153,99 @@
         </div>
     </section>
 
-    <!-- ==========================================
-         SECCIÓN: NOSOTROS
-         ========================================== -->
-    <section id="nosotros" class="py-20 px-6 bg-gray-50 font-['Montserrat',_sans-serif]">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+<!-- ==========================================
+         SECCIÓN NOSOTROS
+========================================== -->
+<section id="nosotros" class="px-6 bg-gray-50 font-['Montserrat',_sans-serif] relative z-10 -mt-16 md:-mt-24 pt-32 md:pt-40 pb-20 overflow-hidden">
+    <!-- IMAGEN DE FONDO (GOTA DE ACEITE) -->
+    <!-- Ajusta la ruta de la imagen en el atributo src -->
+    <div class="absolute inset-0 z-0 flex items-center justify-center opacity-10 pointer-events-none">
+        <img src="Inicio/Aceite.png" alt="Fondo gota de aceite" class="w-2/4 md:w-2/2 lg:w-1/3 object-contain">
+    </div>
+
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            
+            <!-- COLUMNA IZQUIERDA -->
+            <div class="w-full lg:w-1/2 flex flex-col justify-center text-left">
+                <h4 class="text-[#2563eb] font-bold tracking-widest uppercase text-sm mb-3">Conócenos</h4>
+                <h2 class="text-[#43484d] text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
+                    Frio Potencia y Herramientas <span class="text-[#2563eb] block">(FPH)</span>
+                </h2>
+                <div class="w-40 h-1.5 bg-[#087A4A] mb-8 rounded-full"></div>
                 
-                <!-- COLUMNA IZQUIERDA -->
-                <div class="w-full lg:w-1/2 flex flex-col justify-center text-left">
-                    <h4 class="text-[#2563eb] font-bold tracking-widest uppercase text-sm mb-3">Conócenos</h4>
-                    <h2 class="text-[#43484d] text-3xl md:text-5xl font-extrabold mb-6 leading-tight">
-                        Frio Potencia y Herramientas <span class="text-[#2563eb] block">(FPH)</span>
-                    </h2>
-                    <div class="w-40 h-1.5 bg-[#087A4A] mb-8 rounded-full"></div>
-                    
-                    <p class="text-gray-700 text-base md:text-lg leading-relaxed mb-6 font-medium">
-                        Somos una empresa especializada en soluciones industriales integrales, con experiencia en sectores como la agroindustria y manufactura. Ofrecemos soluciones MRO, integrando productos de alta calidad con soporte técnico, convirtiéndonos en un aliado estratégico para nuestros clientes.
-                    </p>
-                   
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shadow-sm shrink-0">
-                                <img src="Inicio/Marca-verificación.png" alt="Calidad Garantizada" class="w-8 h-8 object-contain">
-                            </div>
-                            <span class="font-bold text-gray-800">Calidad Garantizada</span>
+                <p class="text-gray-700 text-base md:text-lg leading-relaxed mb-6 font-medium">
+                    Somos una empresa especializada en soluciones industriales integrales, con experiencia en sectores como la agroindustria y manufactura. Ofrecemos soluciones MRO, integrando productos de alta calidad con soporte técnico, convirtiéndonos en un aliado estratégico para nuestros clientes.
+                </p>
+               
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shadow-sm shrink-0">
+                            <img src="Inicio/Marca-verificación.png" alt="Calidad Garantizada" class="w-8 h-8 object-contain">
                         </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shadow-sm shrink-0">
-                                <img src="Inicio/Entregas-rapidas.png" alt="Entrega Inmediata" class="w-8 h-8 object-contain">
-                            </div>
-                            <span class="font-bold text-gray-800">Entrega Inmediata</span>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shadow-sm shrink-0">
-                                <img src="Inicio/soporte.png" alt="Soporte Técnico" class="w-8 h-8 object-contain">
-                            </div>
-                            <span class="font-bold text-gray-800">Soporte Técnico</span>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shadow-sm shrink-0">
-                                <img src="Inicio/Experiencia-Industrial.png" alt="Experiencia Industrial" class="w-8 h-8 object-contain">
-                            </div>
-                            <span class="font-bold text-gray-800">Experiencia Industrial</span>
-                        </div>
+                        <span class="font-bold text-gray-800">Calidad Garantizada</span>
                     </div>
-                </div>
-
-                <!-- COLUMNA DERECHA -->
-                <div class="w-full lg:w-1/2 flex flex-col gap-6 mt-12 lg:mt-0">
-                    <div class="bg-gradient-to-b from-gray-100 to-gray-200 rounded-[2rem] p-8 shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden group w-full lg:w-11/12 self-end border border-gray-200">
-                        <div class="absolute -right-10 -top-10 w-32 h-32 bg-blue-100/80 rounded-full group-hover:scale-150 transition-transform duration-700 ease-out"></div>
-                        <h3 class="text-[#004b93] text-2xl font-extrabold mb-4 flex items-center gap-3 uppercase tracking-wide relative z-10">
-                            <img src="Inicio/Misión.png" alt="Misión" class="w-12 h-12 object-contain"> Misión
-                        </h3>
-                        <p class="text-gray-700 text-sm md:text-base leading-relaxed relative z-10 font-medium">
-                            Proveer soluciones industriales de alta calidad en transmisión de potencia y automatización, asegurando la continuidad y eficiencia operativa de nuestros clientes a través de un servicio excepcional y entrega oportuna.
-                        </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shadow-sm shrink-0">
+                            <img src="Inicio/Entregas-rapidas.png" alt="Entrega Inmediata" class="w-8 h-8 object-contain">
+                        </div>
+                        <span class="font-bold text-gray-800">Entrega Inmediata</span>
                     </div>
-
-                    <div class="bg-gradient-to-b from-gray-100 to-gray-200 rounded-[2rem] p-8 shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden group w-full lg:w-11/12 self-end border border-gray-200">
-                        <div class="absolute -right-10 -top-10 w-32 h-32 bg-blue-100/80 rounded-full group-hover:scale-150 transition-transform duration-700 ease-out"></div>                    
-                        <h3 class="text-[#004b93] text-2xl font-extrabold mb-4 flex items-center gap-3 uppercase tracking-wide relative z-10">
-                            <img src="Inicio/Visión.png" alt="Visión" class="w-12 h-12 object-contain"> Visión
-                        </h3>
-                        <p class="text-gray-700 text-sm md:text-base leading-relaxed relative z-10 font-medium">
-                            Ser la empresa líder y el socio estratégico más confiable a nivel nacional en la distribución de equipos industriales, reconocidos por nuestra innovación constante y el compromiso inquebrantable con el éxito de la industria.
-                        </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shadow-sm shrink-0">
+                            <img src="Inicio/soporte.png" alt="Soporte Técnico" class="w-8 h-8 object-contain">
+                        </div>
+                        <span class="font-bold text-gray-800">Soporte Técnico</span>
                     </div>
-
-                    <div class="bg-gradient-to-b from-gray-100 to-gray-200 rounded-[2rem] p-8 shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden group w-full lg:w-11/12 self-end border border-gray-200">
-                        <div class="absolute -right-10 -top-10 w-32 h-32 bg-blue-100/50 rounded-full group-hover:scale-150 transition-transform duration-700 ease-out"></div>
-                        <h3 class="text-[#004b93] text-2xl font-extrabold mb-4 flex items-center gap-3 uppercase tracking-wide relative z-10">
-                            <img src="Inicio/Valores.png" alt="Valores" class="w-12 h-12 object-contain"> Valores
-                        </h3>
-                        <ul class="text-gray-700 text-sm md:text-base leading-relaxed relative z-10 font-bold grid grid-cols-2 gap-y-3 gap-x-2">
-                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-[#2563eb] text-xs"></i> Excelencia</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-[#2563eb] text-xs"></i> Integridad</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-[#2563eb] text-xs"></i> Compromiso</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-[#2563eb] text-xs"></i> Innovación</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-[#2563eb] text-xs"></i> Trabajo en equipo</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check-circle text-[#2563eb] text-xs"></i> Enfoque al cliente</li>
-                        </ul>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center shadow-sm shrink-0">
+                            <img src="Inicio/Experiencia-Industrial.png" alt="Experiencia Industrial" class="w-8 h-8 object-contain">
+                        </div>
+                        <span class="font-bold text-gray-800">Experiencia Industrial</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
 
+            <!-- COLUMNA DERECHA -->
+            <div class="w-full lg:w-1/2 flex flex-col gap-6 mt-12 lg:mt-0">
+                <div class="bg-gradient-to-b from-gray-100 to-gray-200 rounded-[2rem] p-8 shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden group w-full lg:w-11/12 self-end border border-gray-200">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-blue-100/80 rounded-full group-hover:scale-150 transition-transform duration-700 ease-out"></div>
+                    <h3 class="text-[#004b93] text-2xl font-extrabold mb-4 flex items-center gap-3 uppercase tracking-wide relative z-10">
+                        <img src="Inicio/Misión.png" alt="Misión" class="w-12 h-12 object-contain"> Misión
+                    </h3>
+                    <p class="text-gray-700 text-sm md:text-base leading-relaxed relative z-10 font-medium">
+                        Proveer soluciones industriales de alta calidad en transmisión de potencia y automatización, asegurando la continuidad y eficiencia operativa de nuestros clientes a través de un servicio excepcional y entrega oportuna.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-b from-gray-100 to-gray-200 rounded-[2rem] p-8 shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden group w-full lg:w-11/12 self-end border border-gray-200">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-blue-100/80 rounded-full group-hover:scale-150 transition-transform duration-700 ease-out"></div>                    
+                    <h3 class="text-[#004b93] text-2xl font-extrabold mb-4 flex items-center gap-3 uppercase tracking-wide relative z-10">
+                        <img src="Inicio/Visión.png" alt="Visión" class="w-12 h-12 object-contain"> Visión
+                    </h3>
+                    <p class="text-gray-700 text-sm md:text-base leading-relaxed relative z-10 font-medium">
+                        Ser la empresa líder y el socio estratégico más confiable a nivel nacional en la distribución de equipos industriales, reconocidos por nuestra innovación constante y el compromiso inquebrantable con el éxito de la industria.
+                    </p>
+                </div>
+
+                <div class="bg-gradient-to-b from-gray-100 to-gray-200 rounded-[2rem] p-8 shadow-md hover:shadow-xl transition-all duration-300 relative overflow-hidden group w-full lg:w-11/12 self-end border border-gray-200">
+                    <div class="absolute -right-10 -top-10 w-32 h-32 bg-blue-100/50 rounded-full group-hover:scale-150 transition-transform duration-700 ease-out"></div>
+                    <h3 class="text-[#004b93] text-2xl font-extrabold mb-4 flex items-center gap-3 uppercase tracking-wide relative z-10">
+                        <img src="Inicio/Valores.png" alt="Valores" class="w-12 h-12 object-contain"> Valores
+                    </h3>
+                    <ul class="text-gray-700 text-sm md:text-base leading-relaxed relative z-10 font-bold grid grid-cols-2 gap-y-3 gap-x-2">
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-[#2563eb] text-xs"></i> Excelencia</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-[#2563eb] text-xs"></i> Integridad</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-[#2563eb] text-xs"></i> Compromiso</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-[#2563eb] text-xs"></i> Innovación</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-[#2563eb] text-xs"></i> Trabajo en equipo</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check-circle text-[#2563eb] text-xs"></i> Enfoque al cliente</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- ==========================================
          SECCIÓN: MARCAS QUE MANEJAMOS (3 LÍNEAS RÁPIDAS)
          ========================================== -->
@@ -337,151 +342,161 @@
         </div>
     </section>
     <!-- ==========================================
-         SECCIÓN MRO
-         ========================================== -->
-    <section id="mro" class="py-20 px-6 bg-gray-50 font-['Montserrat',_sans-serif]">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h4 class="text-[#2563eb] font-bold tracking-widest uppercase text-sm mb-3">Soluciones Integrales</h4>
-                <h2 class="text-[#004b93] text-3xl md:text-5xl font-extrabold uppercase tracking-wide mb-6">Suministros MRO</h2>
-                <div class="w-120 h-1.5 bg-[#087A4A] mx-auto rounded-full mb-12"></div>
-                <p class="text-gray-600 text-lg md:text-xl font-medium max-w-3xl mx-auto">
-                    Respaldo integral para el <span class="font-bold text-[#004b93]">Mantenimiento, Reparación y Operación</span> de su planta industrial.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-                <div class="bg-white rounded-[2rem] p-6 md:p-8 shadow-lg hover:shadow-2xl flex flex-col hover:-translate-y-3 transition-all duration-300 group border border-gray-100 relative overflow-hidden">
-                    <div class="w-full h-56 overflow-hidden rounded-2xl mb-6 relative">
-                        <div class="absolute inset-0 bg-[#004b93] opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"></div>
-                        <img src="Inicio/Agroindustria.webp" alt="Agroindustria" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <h3 class="text-[#004b93] text-2xl font-bold mb-3 uppercase tracking-wide group-hover:text-[#2563eb] transition-colors">Agroindustria y Extracción</h3>
-                    <p class="text-gray-600 text-base leading-relaxed">
-                        Proveemos los consumibles, rodamientos y lubricación especializada para soportar ambientes agresivos, alta fricción y operaciones continuas 24/7.
-                    </p>
-                </div>
-
-                <div class="bg-white rounded-[2rem] p-6 md:p-8 shadow-lg hover:shadow-2xl flex flex-col hover:-translate-y-3 transition-all duration-300 group border border-gray-100 relative overflow-hidden">
-                    <div class="w-full h-56 overflow-hidden rounded-2xl mb-6 relative">
-                        <div class="absolute inset-0 bg-[#004b93] opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"></div>
-                        <img src="Inicio/Manufactura y Líneas de Producción.webp" alt="Líneas de Producción" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <h3 class="text-[#004b93] text-2xl font-bold mb-3 uppercase tracking-wide group-hover:text-[#2563eb] transition-colors">Manufactura y Producción</h3>
-                    <p class="text-gray-600 text-base leading-relaxed">
-                        Evite paros no programados. Suministramos refacciones, neumática y componentes de transmisión críticos para mantener sus líneas de ensamblaje en movimiento.
-                    </p>
-                </div>
-
-                <div class="bg-white rounded-[2rem] p-6 md:p-8 shadow-lg hover:shadow-2xl flex flex-col hover:-translate-y-3 transition-all duration-300 group border border-gray-100 relative overflow-hidden">
-                    <div class="w-full h-56 overflow-hidden rounded-2xl mb-6 relative">
-                        <div class="absolute inset-0 bg-[#004b93] opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"></div>
-                        <img src="Inicio/mantenimiento industrial.jpg" alt="Mantenimiento Industrial" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <h3 class="text-[#004b93] text-2xl font-bold mb-3 uppercase tracking-wide group-hover:text-[#2563eb] transition-colors">Mantenimiento Pesado</h3>
-                    <p class="text-gray-600 text-base leading-relaxed">
-                        Herramientas de grado industrial, sellado de alta resistencia y componentes hidráulicos diseñados para soportar las cargas más extremas de su maquinaria.
-                    </p>
-                </div>
-
-                <div class="bg-white rounded-[2rem] p-6 md:p-8 shadow-lg hover:shadow-2xl flex flex-col hover:-translate-y-3 transition-all duration-300 group border border-gray-100 relative overflow-hidden">
-                    <div class="w-full h-56 overflow-hidden rounded-2xl mb-6 relative">
-                        <div class="absolute inset-0 bg-[#004b93] opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"></div>
-                        <img src="MRO/Suministros y Seguridad de Planta1.webp" alt="Suministros de Planta" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-                    </div>
-                    <h3 class="text-[#004b93] text-2xl font-bold mb-3 uppercase tracking-wide group-hover:text-[#2563eb] transition-colors">Suministros y Seguridad</h3>
-                    <p class="text-gray-600 text-base leading-relaxed">
-                        Gestión integral de repuestos generales y equipo de protección (EPP) para asegurar que sus técnicos operen en un entorno seguro y altamente productivo.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ==========================================
-         SECCIÓN CONTACTO
-         ========================================== -->
-    <section id="contacto" class="relative bg-white py-24 px-6 font-['Montserrat',_sans-serif] overflow-hidden">
+         SECCIÓN MRO (Ultra Orientada a Ventas B2B)
+========================================== -->
+<section id="mro" class="py-20 px-6 bg-gray-50 font-['Montserrat',_sans-serif]">
+    <div class="max-w-7xl mx-auto">
         
-        <!-- Fondo decorativo sesgado (Gris muy sutil) -->
-        <div class="absolute inset-0 bg-gray-50 skew-y-3 transform origin-bottom-left -z-20"></div>
-
-        <!-- ==========================================
-             ESPACIO PARA TU FOTO DE FONDO O LOGO MARCA DE AGUA
-             Cambia el src por la imagen o logo que quieras de fondo.
-             La opacidad está al 5% (opacity-5) para que no estorbe la lectura.
-             ========================================== -->
-        <img src="Inicio/fph-logo-blanco.png" alt="Fondo FPH" class="absolute top-1/4 right-0 transform -translate-y-1 w-full md:w-1/2 object-contain opacity-5 pointer-events-none -z-10">
-
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start relative z-10">
+        <!-- Encabezado de Ventas -->
+        <div class="text-center mb-16">
+            <h4 class="text-[#2563eb] font-bold tracking-widest uppercase text-sm mb-3">Maximice su rentabilidad</h4>
+            <h2 class="text-[#004b93] text-3xl md:text-5xl font-extrabold uppercase tracking-wide mb-6">Suministros MRO</h2>
+            <div class="w-120 h-1.5 bg-[#087A4A] mx-auto rounded-full mb-8"></div>
+            <p class="text-gray-600 text-lg md:text-xl font-medium max-w-3xl mx-auto">
+                ¿Sabe cuánto le cuesta una hora de maquinaria detenida? En FPH somos su aliado estratégico en <span class="font-bold text-[#004b93]">Mantenimiento, Reparación y Operación</span>. Garantizamos disponibilidad, rapidez y calidad premium para que su planta nunca deje de facturar.
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             
-            <!-- COLUMNA IZQUIERDA: Textos y Mapa (Ahora es MÁS ANCHA: ocupa 7 columnas) -->
-            <div class="lg:col-span-7 flex flex-col justify-center">
-                <h4 class="text-[#2563eb] font-bold tracking-widest uppercase text-sm mb-3">Trabajemos juntos</h4>
-                <h2 class="text-[#004b93] text-4xl md:text-5xl font-extrabold mb-6 leading-tight">¿Listo para optimizar tu planta?</h2>
-                <p class="text-gray-600 font-medium mb-10 text-base md:text-lg leading-relaxed max-w-2xl">
-                    Conectamos calidad, rapidez y experiencia para cubrir todas tus necesidades industriales. Escríbenos y un experto te atenderá de inmediato.
-                </p>
-                
-                <!-- Contenedor del Mapa (Ahora es MÁS GRANDE y ALTO) -->
-                <div class="w-full h-80 md:h-[400px] bg-gray-200 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.918329591888!2d-97.09935112627021!3d18.84629885914636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c5037a5c781613%3A0x402c0d3d5b64d18!2sFrio%20Potencia%20y%20Herramientas%20S.A.%20de%20C.V.%20%7C%20MRO%3A%20HVACR%2C%20Transmisi%C3%B3n%20de%20Potencia%20y%20M%C3%A1s...!5e0!3m2!1ses-419!2smx!4v1790965094549!5m2!1ses-419!2smx" width="700" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <!-- Tarjeta 1: Agroindustria -->
+            <div class="bg-white rounded-[2rem] p-6 md:p-8 shadow-lg hover:shadow-2xl flex flex-col hover:-translate-y-3 transition-all duration-300 group border border-gray-100 relative overflow-hidden">
+                <div class="w-full h-56 overflow-hidden rounded-2xl mb-6 relative">
+                    <div class="absolute inset-0 bg-[#004b93] opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"></div>
+                    <img src="Inicio/Industria y extracción.jfif" alt="Agroindustria" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                 </div>
+                <h3 class="text-[#004b93] text-2xl font-bold mb-3 uppercase tracking-wide group-hover:text-[#2563eb] transition-colors">Agroindustria y Extracción</h3>
+                <p class="text-gray-600 text-base leading-relaxed">
+                    Desempeño imparable en las condiciones más extremas. Proveemos rodamientos de alta resistencia y lubricación avanzada que blindan sus equipos contra la corrosión. <strong class="text-gray-800">Asegure operaciones 24/7 sin fallas y reduzca drásticamente sus costos de mantenimiento.</strong>
+                </p>
             </div>
 
-            <!-- COLUMNA DERECHA: Formulario (Ahora es MÁS ANGOSTO: ocupa 5 columnas y es Gris) -->
-            <div class="lg:col-span-5 flex justify-end">
-                <!-- Fondo Gris (bg-gray-100) para el formulario -->
-                <div class="w-full max-w-[500px] bg-gray-100 rounded-[2rem] p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-t-8 border-[#087A4A]">
-                    
-                    <h3 class="text-[#004b93] text-2xl md:text-3xl font-bold mb-8">Envíanos tu consulta</h3>
-                    
-                    <form action="#" method="POST" class="space-y-6">
-                        
-                        <!-- Grid para Nombre y Teléfono en la misma fila -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-gray-600 text-xs font-bold mb-2 uppercase tracking-wider">Nombre completo</label>
-                                <!-- Campos en blanco (bg-white) para que resalten sobre el fondo gris -->
-                                <input type="text" placeholder="Ej. Juan Pérez" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#2563eb] transition-all font-medium shadow-sm">
-                            </div>
-                            <div>
-                                <label class="block text-gray-600 text-xs font-bold mb-2 uppercase tracking-wider">Teléfono</label>
-                                <input type="tel" placeholder="Ej. 555 123 4567" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#2563eb] transition-all font-medium shadow-sm">
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="block text-gray-600 text-xs font-bold mb-2 uppercase tracking-wider">Correo Electrónico</label>
-                            <input type="email" placeholder="tu@empresa.com" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#2563eb] transition-all font-medium shadow-sm">
-                        </div>
-
-                        <div>
-                            <label class="block text-gray-600 text-xs font-bold mb-2 uppercase tracking-wider">¿En qué podemos ayudarte?</label>
-                            <textarea rows="4" placeholder="Escribe aquí los detalles..." class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#2563eb] transition-all font-medium resize-none shadow-sm"></textarea>
-                        </div>
-
-                        <!-- ReCAPTCHA -->
-                        <div class="bg-white border border-gray-200 rounded-xl p-4 flex items-center justify-between w-full shadow-sm">
-                            <div class="flex items-center gap-3">
-                                <input type="checkbox" class="w-6 h-6 border-gray-300 rounded cursor-pointer text-[#25d366] focus:ring-[#2563eb]">
-                                <span class="text-sm font-bold text-gray-700">No soy un robot</span>
-                            </div>
-                            <div class="flex flex-col items-center">
-                                <i class="fas fa-sync-alt text-[#2563eb] text-xl"></i>
-                                <span class="text-[10px] text-gray-500 mt-1 font-bold">reCAPTCHA</span>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="w-full bg-[#004b93] text-white font-extrabold text-base md:text-lg rounded-xl py-4 mt-2 hover:bg-[#087A4A] hover:text-[#0a192f] hover:shadow-lg transition-all duration-300 uppercase tracking-widest">
-                            Enviar Mensaje <i class="fas fa-paper-plane ml-2"></i>
-                        </button>
-                        
-                    </form>
+            <!-- Tarjeta 2: Manufactura -->
+            <div class="bg-white rounded-[2rem] p-6 md:p-8 shadow-lg hover:shadow-2xl flex flex-col hover:-translate-y-3 transition-all duration-300 group border border-gray-100 relative overflow-hidden">
+                <div class="w-full h-56 overflow-hidden rounded-2xl mb-6 relative">
+                    <div class="absolute inset-0 bg-[#004b93] opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"></div>
+                    <img src="Inicio//Manufactura y Producción.jfif" alt="Líneas de Producción" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                 </div>
+                <h3 class="text-[#004b93] text-2xl font-bold mb-3 uppercase tracking-wide group-hover:text-[#2563eb] transition-colors">Manufactura y Producción</h3>
+                <p class="text-gray-600 text-base leading-relaxed">
+                    Cada minuto de inactividad es dinero perdido. Mantenga sus líneas de ensamblaje a máxima velocidad con nuestro suministro de refacciones y neumática. <strong class="text-gray-800">Si su producción exige precisión y disponibilidad inmediata, nosotros somos el proveedor que necesita.</strong>
+                </p>
+            </div>
+
+            <!-- Tarjeta 3: Mantenimiento Pesado -->
+            <div class="bg-white rounded-[2rem] p-6 md:p-8 shadow-lg hover:shadow-2xl flex flex-col hover:-translate-y-3 transition-all duration-300 group border border-gray-100 relative overflow-hidden">
+                <div class="w-full h-56 overflow-hidden rounded-2xl mb-6 relative">
+                    <div class="absolute inset-0 bg-[#004b93] opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"></div>
+                    <img src="Inicio/mantenimiento industrial.jpg" alt="Mantenimiento Industrial" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <h3 class="text-[#004b93] text-2xl font-bold mb-3 uppercase tracking-wide group-hover:text-[#2563eb] transition-colors">Mantenimiento Pesado</h3>
+                <p class="text-gray-600 text-base leading-relaxed">
+                    Potencia absoluta para las reparaciones más críticas. Equipe a su personal con herramientas de grado industrial y componentes hidráulicos que garantizan reparaciones definitivas a la primera. <strong class="text-gray-800">Alargue hoy mismo la vida útil de sus activos más costosos.</strong>
+                </p>
+            </div>
+
+            <!-- Tarjeta 4: Suministros y Seguridad -->
+            <div class="bg-white rounded-[2rem] p-6 md:p-8 shadow-lg hover:shadow-2xl flex flex-col hover:-translate-y-3 transition-all duration-300 group border border-gray-100 relative overflow-hidden">
+                <div class="w-full h-56 overflow-hidden rounded-2xl mb-6 relative">
+                    <div class="absolute inset-0 bg-[#004b93] opacity-0 group-hover:opacity-20 transition-opacity duration-300 z-10"></div>
+                    <img src="Inicio/Suministro y seguridad.jfif" alt="Suministros de Planta" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                </div>
+                <h3 class="text-[#004b93] text-2xl font-bold mb-3 uppercase tracking-wide group-hover:text-[#2563eb] transition-colors">Suministros y Seguridad</h3>
+                <p class="text-gray-600 text-base leading-relaxed">
+                    Cero accidentes equivale a máxima rentabilidad. Simplifique sus compras centralizando con nosotros su Equipo de Protección Personal (EPP) homologado. <strong class="text-gray-800">Proteja a su personal y cumpla con las normativas oficiales sin complicar su logística de compras.</strong>
+                </p>
             </div>
             
         </div>
-    </section>
+
+    </div>
+</section>
+        <!-- ==========================================
+            SECCIÓN CONTACTO
+            ========================================== -->
+        <section id="contacto" class="relative bg-white py-24 px-6 font-['Montserrat',_sans-serif] overflow-hidden">
+            
+            <!-- Fondo decorativo sesgado (Gris muy sutil) -->
+            <div class="absolute inset-0 bg-gray-50 skew-y-3 transform origin-bottom-left -z-20"></div>
+
+            <!-- ==========================================
+                ESPACIO PARA TU FOTO DE FONDO O LOGO MARCA DE AGUA
+                Cambia el src por la imagen o logo que quieras de fondo.
+                La opacidad está al 5% (opacity-5) para que no estorbe la lectura.
+                ========================================== -->
+            <img src="Inicio/Gota2.png" alt="Fondo FPH" class="absolute top-1/4 right-0 transform -translate-y-1 w-full md:w-1/2 object-contain opacity-30 pointer-events-none -z-10">
+
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start relative z-10">
+                
+                <!-- COLUMNA IZQUIERDA: Textos y Mapa (Ahora es MÁS ANCHA: ocupa 7 columnas) -->
+                <div class="lg:col-span-7 flex flex-col justify-center">
+                    <h4 class="text-[#2563eb] font-bold tracking-widest uppercase text-sm mb-3">Trabajemos juntos</h4>
+                    <h2 class="text-[#004b93] text-4xl md:text-5xl font-extrabold mb-6 leading-tight">¿Listo para optimizar tu planta?</h2>
+                    <p class="text-gray-600 font-medium mb-10 text-base md:text-lg leading-relaxed max-w-2xl">
+                        Conectamos calidad, rapidez y experiencia para cubrir todas tus necesidades industriales. Escríbenos y un experto te atenderá de inmediato.
+                    </p>
+                    
+                    <!-- Contenedor del Mapa (Ahora es MÁS GRANDE y ALTO) -->
+                    <div class="w-full h-80 md:h-[400px] bg-gray-200 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3775.918329591888!2d-97.09935112627021!3d18.84629885914636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c5037a5c781613%3A0x402c0d3d5b64d18!2sFrio%20Potencia%20y%20Herramientas%20S.A.%20de%20C.V.%20%7C%20MRO%3A%20HVACR%2C%20Transmisi%C3%B3n%20de%20Potencia%20y%20M%C3%A1s...!5e0!3m2!1ses-419!2smx!4v1790965094549!5m2!1ses-419!2smx" width="700" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA: Formulario (Ahora es MÁS ANGOSTO: ocupa 5 columnas y es Gris) -->
+                <div class="lg:col-span-5 flex justify-end">
+                    <!-- Fondo Gris (bg-gray-100) para el formulario -->
+                    <div class="w-full max-w-[500px] bg-gray-100 rounded-[2rem] p-8 md:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-t-8 border-[#087A4A]">
+                        <!-- Ajusta la ruta en src. Está en la esquina inferior derecha. -->
+                    <img src="Inicio/Gota2.png" alt="Marca de agua" class="absolute -right-10 -center-5 w-64 h-68 object-contain opacity-15 pointer-events-none z-0">
+                        <h3 class="text-[#004b93] text-2xl md:text-3xl font-bold mb-8">Envíanos tu consulta</h3>
+                        
+                        <form action="#" method="POST" class="space-y-6">
+                            
+                            <!-- Grid para Nombre y Teléfono en la misma fila -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-gray-600 text-xs font-bold mb-2 uppercase tracking-wider">Nombre completo</label>
+                                    <!-- Campos en blanco (bg-white) para que resalten sobre el fondo gris -->
+                                    <input type="text" placeholder="Ej. Juan Pérez" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#2563eb] transition-all font-medium shadow-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-600 text-xs font-bold mb-2 uppercase tracking-wider">Teléfono</label>
+                                    <input type="tel" placeholder="Ej. 555 123 4567" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#2563eb] transition-all font-medium shadow-sm">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-600 text-xs font-bold mb-2 uppercase tracking-wider">Correo Electrónico</label>
+                                <input type="email" placeholder="tu@empresa.com" class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#2563eb] transition-all font-medium shadow-sm">
+                            </div>
+
+                            <div>
+                                <label class="block text-gray-600 text-xs font-bold mb-2 uppercase tracking-wider">¿En qué podemos ayudarte?</label>
+                                <textarea rows="4" placeholder="Escribe aquí los detalles..." class="w-full bg-white border border-gray-200 rounded-xl px-4 py-3.5 text-gray-800 focus:outline-none focus:ring-2 focus:ring-[#2563eb] transition-all font-medium resize-none shadow-sm"></textarea>
+                            </div>
+
+                            <!-- ReCAPTCHA -->
+                            <div class="bg-white border border-gray-200 rounded-xl p-4 flex items-center justify-between w-full shadow-sm">
+                                <div class="flex items-center gap-3">
+                                    <input type="checkbox" class="w-6 h-6 border-gray-300 rounded cursor-pointer text-[#25d366] focus:ring-[#2563eb]">
+                                    <span class="text-sm font-bold text-gray-700">No soy un robot</span>
+                                </div>
+                                <div class="flex flex-col items-center">
+                                    <i class="fas fa-sync-alt text-[#2563eb] text-xl"></i>
+                                    <span class="text-[10px] text-gray-500 mt-1 font-bold">reCAPTCHA</span>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="w-full bg-[#004b93] text-white font-extrabold text-base md:text-lg rounded-xl py-4 mt-2 hover:bg-[#087A4A] hover:text-[#0a192f] hover:shadow-lg transition-all duration-300 uppercase tracking-widest">
+                                Enviar Mensaje <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                            
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
     <!-- ==========================================
          FOOTER
          ========================================== -->
@@ -539,5 +554,6 @@
             });
         });
     </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </body>
 </html>
