@@ -8,18 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<!-- Script para que funcione el Menú Móvil -->
-<script>
-    const btnMenu = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
 
-    if (btnMenu && menu) {
-        btnMenu.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    }
-</script>
-<body class="bg-gray-50">
 <!-- ==========================================
          MENÚ DE NAVEGACIÓN (NAV)
 ========================================== -->
@@ -408,3 +397,16 @@
             </div>
         </div>
     </footer>
+    <!-- Script para que funcione el Menú Móvil -->
+    <script>
+        const btnMenu = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        if (btnMenu && menu) {
+            btnMenu.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

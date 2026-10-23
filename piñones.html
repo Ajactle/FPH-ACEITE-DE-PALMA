@@ -212,18 +212,6 @@
 
     </div>
 </section>
-<!-- Script para que funcione el Menú Móvil -->
-<script>
-    const btnMenu = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-
-    if (btnMenu && menu) {
-        btnMenu.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    }
-</script>
-
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const readMoreBtns = document.querySelectorAll('.read-more-btn');
@@ -281,3 +269,16 @@
             </div>
         </div>
     </footer>
+    <!-- Script para que funcione el Menú Móvil -->
+    <script>
+        const btnMenu = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        if (btnMenu && menu) {
+            btnMenu.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
