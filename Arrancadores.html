@@ -7,17 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-<script>
-    const btnMenu = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
-
-    if (btnMenu && menu) {
-        btnMenu.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-    }
-</script>
-<nav class="absolute top-0 left-0 w-full z-50 font-['Montserrat',_sans-serif]">
+ <nav class="absolute top-0 left-0 w-full z-50 font-['Montserrat',_sans-serif]">
     <div class="max-w-7xl mx-auto px-6 py-4 md:py-6 flex justify-between items-center relative">
         
         <!-- LOGO (Sin filtros para que conserve sus colores originales) -->
@@ -33,11 +23,11 @@
             <a href="index.html#inicio" class="hover:text-[#25d366] transition-colors drop-shadow-md">INICIO</a>
             <a href="index.html#nosotros" class="hover:text-[#25d366] transition-colors drop-shadow-md no-underline">NOSOTROS</a>
             
-            <div class="relative group h-full flex items-center">
-                <a href="Potencia.html" class="flex items-center gap-1.5 text-[#25d366] drop-shadow-md py-4 cursor-pointer">
-                    PRODUCTOS <i class="fas fa-chevron-down text-[10px] opacity-70 group-hover:opacity-100 transition-opacity"></i>
-                </a>
-            </div>
+           <div class="relative group h-full flex items-center">
+                    <a href="Potencia.html" class="flex items-center gap-1.5 hover:text-[#25d366] transition-colors drop-shadow-md py-4 cursor-pointer">
+                        PRODUCTOS <i class="fas fa-chevron-down text-[10px] opacity-70 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
+                </div>
             
             <a href="index.html#mro" class="hover:text-[#25d366] transition-colors drop-shadow-md">MRO</a>
             <a href="index.html#contacto" class="hover:text-[#25d366] transition-colors drop-shadow-md">CONTACTO</a>
@@ -54,29 +44,22 @@
     <!-- MENU MÓVIL DESPLEGABLE -->
     <div id="mobile-menu" class="hidden md:hidden bg-[#0a192f] absolute top-full left-0 w-full shadow-lg border-t border-white/10">
         <div class="flex flex-col text-white text-sm font-semibold tracking-wide p-6 gap-6">
-            <a href="index.html#inicio" class="mobile-link hover:text-[#ffc107] transition-colors">INICIO</a>
-            <a href="index.html#nosotros" class="mobile-link hover:text-[#ffc107] transition-colors">NOSOTROS</a>
-            <a href="Potencia.html" class="mobile-link text-[#ffc107] transition-colors">PRODUCTOS</a>
-            <a href="index.html#mro" class="mobile-link hover:text-[#ffc107] transition-colors">MRO</a>
-            <a href="index.html#contacto" class="mobile-link hover:text-[#ffc107] transition-colors">CONTACTO</a>
+            <a href="index.html#inicio" class="mobile-link hover:text-[#25d366] transition-colors">INICIO</a>
+            <a href="index.html#nosotros" class="mobile-link hover:text-[#25d366] transition-colors">NOSOTROS</a>
+            <a href="Potencia.html" class="mobile-link text-[#25d366] transition-colors">PRODUCTOS</a>
+            <a href="index.html#mro" class="mobile-link hover:text-[#25d366] transition-colors">MRO</a>
+            <a href="index.html#contacto" class="mobile-link hover:text-[#25d366] transition-colors">CONTACTO</a>
         </div>
     </div>
 </nav>
-<section id="inicio" class="relative font-['Montserrat',_sans-serif] flex flex-col w-full h-[80vh] md:h-[98vh] overflow-hidden" style="clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 95%, 0 100%);">
-    
-  
-    <!-- Agregué un bg-[#0a192f] por si el video tarda 1 segundo en cargar, no se vea blanco -->
-    <div class="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none bg-[#0a192f]">
-        
-        <!-- Etiqueta de Video Nativo -->
-        <video 
-            autoplay 
-            loop 
-            muted 
-            playsinline 
-            class="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2"
-        >
-            <!-- AQUÍ PONES EL NOMBRE DE TU VIDEO DESCARGADO -->
+   
+<!-- ==========================================
+         SECCIÓN PRINCIPAL (HERO)
+========================================== -->
+<section id="inicio" class="relative z-20 font-['Montserrat',_sans-serif] flex flex-col w-full h-[80vh] md:h-[100vh] overflow-hidden" style="clip-path: polygon(0 0, 100% 0, 100% 92%, 50% 100%, 0 92%);">        
+        <!-- Fondo de Video -->
+        <div class="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none bg-[#0a192f]">
+            <video autoplay loop muted playsinline class="absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2">
             <source src="Productos/Automatización-control/Arrancador/Arracandor.mp4" type="video/mp4">
         </video>
 
@@ -395,3 +378,13 @@
             </div>
         </div>
     </footer>
+    <script>
+    const btnMenu = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    if (btnMenu && menu) {
+        btnMenu.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    }
+</script>
